@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Atelier filières — Attractivité &amp; Internationalisation — Région Réunion — 2 juillet 2026</title>
+<style>
+  :root{color-scheme:light;
+    --navy:#002D69;--orange:#FF6600;--orange-light:#EFAB7D;--blue-light:#A4BBD8;
+    --gray-dark:#3C3C3C;--gray:#999999;--gray-light:#E5E5E5;
+    --bg:#FFFFFF;--bg-soft:#F7F7F7;--green:#2E8B57;--red:#C0392B;--amber:#E08600;--mr:#8E44AD;
+    --zoi:#002D69;--eur:#FF6600;--aut:#5E7CA6;
+    --f-agro:#3C8A4E;--f-form:#D4A017;--f-image:#7E57C2;--f-num:#5C6BC0;
+    --f-bati:#1565C0;--f-enr:#2196A6;--f-tour:#C2185B;--f-sante:#00897B;--f-bleue:#0277BD;--f-autres:#8D6E63;}
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--gray-dark);font-family:"Arial Narrow","Arial",system-ui,sans-serif;font-size:14px;}
+  a{color:var(--orange);text-decoration:none;}
+  .app{max-width:1640px;margin:0 auto;padding:18px 26px 70px;}
+  header.top{display:flex;align-items:center;gap:18px;padding-bottom:12px;border-bottom:3px solid var(--orange);margin-bottom:2px;}
+  header.top img.logo{height:46px;width:auto;display:block;}
+  header.top .title-block{flex:1;}
+  header.top h1{margin:0;color:var(--navy);text-transform:uppercase;font-size:21px;letter-spacing:.4px;font-weight:700;line-height:1.1;}
+  header.top .subtitle{color:var(--orange);font-weight:700;font-size:13.5px;margin-top:3px;}
+  header.top .meta{color:var(--gray);font-size:12px;margin-top:3px;}
+  .reglogo{height:48px;min-width:120px;display:flex;align-items:center;justify-content:center;}
+  .reglogo img{height:48px;width:auto;} .reglogo .ph{border:1px dashed var(--gray);border-radius:4px;color:var(--gray);font-size:10.5px;text-align:center;padding:6px 10px;}
+  .accent-bar{height:4px;background:var(--orange-light);margin:0 0 14px;}
+  .statusbar{display:flex;align-items:center;gap:12px;padding:7px 14px;margin:8px 0 12px;background:var(--bg-soft);border-radius:4px;font-size:12px;}
+  .statusbar .dot-status{width:8px;height:8px;border-radius:50%;background:var(--gray);flex-shrink:0;}
+  .statusbar.online .dot-status{background:var(--green);box-shadow:0 0 0 3px rgba(46,139,87,.18);}
+  .statusbar .session-info{flex:1;} .statusbar strong{color:var(--navy);}
+  .statusbar .pill{padding:2px 9px;background:#fff;border:1px solid var(--gray-light);border-radius:3px;font-family:ui-monospace,Menlo,monospace;}
+  .statusbar .adminbtn{cursor:pointer;font-weight:700;color:var(--navy);}
+  body.admin .statusbar{background:#FFF3E9;} body.admin .statusbar .adminbtn{color:var(--orange);}
+  .admin-only{display:none;} body.admin .admin-only{display:initial;} body.admin .admin-only.block{display:block;}
+  nav.tabs{display:flex;gap:4px;border-bottom:2px solid var(--gray-light);margin-bottom:18px;flex-wrap:wrap;}
+  nav.tabs button{border:none;background:transparent;font-family:inherit;font-size:13px;font-weight:700;color:var(--gray);padding:10px 13px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;text-transform:uppercase;letter-spacing:.3px;}
+  nav.tabs button:hover{color:var(--navy);} nav.tabs button.active{color:var(--navy);border-bottom-color:var(--orange);}
+  .view{display:none;} .view.active{display:block;}
+  h2.sec{color:var(--navy);font-size:17px;text-transform:uppercase;letter-spacing:.5px;margin:22px 0 8px;}
+  p.lead{line-height:1.5;max-width:1000px;margin:0 0 10px;}
+  .panel{background:var(--bg-soft);border-left:4px solid var(--orange);padding:14px 18px;margin-bottom:14px;}
+  .panel.navyb{border-left-color:var(--navy);}
+  .panel h4{margin:0 0 6px;color:var(--navy);font-size:13px;text-transform:uppercase;letter-spacing:.5px;}
+  .panel p{margin:0 0 6px;line-height:1.45;}
+  .small{color:var(--gray);font-size:12px;}
+  .btn{font-family:inherit;font-size:13px;font-weight:700;border:1px solid var(--navy);background:var(--navy);color:#fff;padding:8px 14px;border-radius:4px;cursor:pointer;transition:.12s;}
+  .btn:hover{background:#013a86;}
+  .btn.ghost{background:#fff;color:var(--navy);} .btn.ghost:hover{background:var(--bg-soft);}
+  .btn.orange{background:var(--orange);border-color:var(--orange);} .btn.orange:hover{background:#e65c00;}
+  .btn.danger{background:#fff;color:var(--red);border-color:var(--red);} .btn.danger:hover{background:#fdeceb;}
+  .btn.sm{padding:4px 9px;font-size:12px;}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px;}
+  select,input,textarea{font-family:inherit;font-size:13px;border:1px solid var(--gray-light);border-radius:4px;padding:6px 9px;background:#fff;}
+  .kpis{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 6px;}
+  .kpi{background:var(--navy);color:#fff;border-radius:6px;padding:14px 18px;min-width:130px;}
+  .kpi .v{font-size:28px;font-weight:700;line-height:1;} .kpi .l{font-size:11.5px;opacity:.85;margin-top:4px;text-transform:uppercase;letter-spacing:.4px;}
+  .kpi.alt{background:var(--orange);}
+  .flow{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch;margin:6px 0 8px;}
+  .flow .step{flex:1;min-width:185px;background:#fff;border:1px solid var(--gray-light);border-top:3px solid var(--orange);border-radius:5px;padding:12px 14px;}
+  .flow .step.navyb{border-top-color:var(--navy);}
+  .flow .step .s{color:var(--orange);font-weight:700;font-size:12px;} .flow .step.navyb .s{color:var(--navy);}
+  .flow .step h4{margin:3px 0 5px;color:var(--navy);font-size:14px;} .flow .step p{margin:0;font-size:12.5px;line-height:1.35;} .flow .arr{display:flex;align-items:center;color:var(--orange-light);font-size:22px;font-weight:700;}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.3px;}
+  .tag.etude{background:#fff;color:var(--navy);border:1px solid var(--navy);} .tag.revise{background:var(--orange);color:#fff;} .tag.top6{background:var(--red);color:#fff;} .tag.na{background:var(--gray-light);color:var(--gray);} .tag.cust{background:var(--f-image);color:#fff;} .tag.mr{background:var(--mr);color:#fff;}
+  .scoredot{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:#fff;font-weight:700;font-size:13px;flex-shrink:0;}
+  .sc-0{background:var(--gray);} .sc-r{background:var(--red);} .sc-o{background:var(--amber);} .sc-l{background:#7CB342;} .sc-g{background:var(--green);}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px;background:var(--bg-soft);padding:10px 12px;border-radius:5px;}
+  .filters label{font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.3px;margin-right:3px;}
+  .opp{display:grid;grid-template-columns:46px 56px 1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid var(--gray-light);border-left:5px solid var(--gray);border-radius:5px;padding:9px 12px;margin-bottom:7px;cursor:pointer;}
+  .opp:hover{background:#fffaf5;} .opp.t6{box-shadow:0 0 0 1px var(--red) inset;}
+  .opp .rank{text-align:center;color:var(--navy);font-weight:700;font-size:15px;} .opp .rank small{display:block;color:var(--gray);font-size:9px;font-weight:400;text-transform:uppercase;}
+  .opp .main .pl{color:var(--navy);font-weight:700;font-size:14px;line-height:1.15;} .opp .main .mk{color:var(--gray-dark);font-size:12.5px;} .opp .main .mk b{color:var(--orange);}
+  .opp .main .meta{margin-top:3px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+  .chip{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:10px;color:#fff;}
+  .zchip{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:3px;border:1px solid;}
+  .zchip.zoi{color:var(--zoi);border-color:var(--zoi);} .zchip.eur{color:var(--eur);border-color:var(--eur);} .zchip.aut{color:var(--aut);border-color:var(--aut);}
+  .opp .score .grade{font-size:11px;color:var(--gray);text-align:right;line-height:1.1;min-width:64px;} .opp .score .grade b{color:var(--navy);font-size:13px;}
+  .matrix-wrap{overflow-x:auto;border:1px solid var(--gray-light);border-radius:6px;}
+  table.heat,table.gp,table.synthtab,table.attrtab,table.mtx{border-collapse:collapse;width:100%;background:#fff;}
+  table th,table td{border:1px solid var(--gray-light);padding:6px 8px;font-size:12.5px;vertical-align:top;}
+  table.gp th,table.synthtab th{background:var(--navy);color:#fff;text-transform:uppercase;font-size:11px;letter-spacing:.3px;text-align:left;}
+  table.heat th{background:var(--bg-soft);color:var(--navy);text-align:center;font-size:11px;text-transform:uppercase;} table.heat td{text-align:center;}
+  table.heat td.fl{text-align:left;font-weight:700;color:var(--navy);} table.heat td.cell{color:#fff;font-weight:700;} table.heat td.cell.e{background:#fff;color:var(--gray-light);}
+  table.gp input,table.gp select{width:100%;padding:4px 6px;font-size:12px;}
+  table.gp td .src{font-size:10px;font-weight:700;text-transform:uppercase;} table.gp td .src.e{color:var(--navy);} table.gp td .src.a{color:var(--orange);}
+  table td.x{text-align:center;color:var(--gray);cursor:pointer;font-size:15px;}
+  table.attrtab th,table.mtx th{background:var(--navy);color:#fff;text-transform:uppercase;font-size:10.5px;text-align:left;}
+  table.attrtab th.zoi,table.mtx th.zoi{background:var(--zoi);} table.attrtab th.eur,table.mtx th.eur{background:var(--eur);} table.attrtab th.aut,table.mtx th.aut{background:var(--aut);} table.attrtab th.trans,table.mtx th.trans{background:#6B6B6B;}
+  table.attrtab td.fl,table.mtx td.fl{font-weight:700;color:var(--navy);min-width:150px;max-width:175px;background:var(--bg-soft);}
+  table.attrtab td.attrcell,table.mtx td.attrcell{min-width:165px;max-width:210px;}
+  table.mtx td.icell{min-width:150px;max-width:185px;font-size:11.5px;}
+  .mtx .dim-a{background:#eef3fb;} .mtx .dim-i{background:#FFF6EF;}
+  .addmini{font-size:11px;font-weight:700;color:var(--orange);background:transparent;border:none;cursor:pointer;padding:2px 0;}
+  .addmini:hover{text-decoration:underline;}
+  .uitem{display:flex;align-items:center;gap:6px;font-size:12.5px;padding:4px 6px;background:#eef3fb;border-left:3px solid var(--navy);border-radius:3px;margin-bottom:4px;}
+  .uitem input{flex:1;border:none;background:transparent;font-size:12.5px;padding:2px 4px;} .uitem input:focus{outline:1px solid var(--orange-light);background:#fff;}
+  .uitem .x{margin-left:auto;color:var(--gray);cursor:pointer;font-size:14px;}
+  .bdot{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;border-radius:50%;color:#fff;font-size:9px;font-weight:700;cursor:pointer;margin-right:4px;flex-shrink:0;} .bchip{display:inline-flex;align-items:center;gap:5px;font-size:12px;line-height:1.2;background:#eef3fb;border:1px solid var(--gray-light);border-radius:5px;padding:3px 7px;margin:0 4px 4px 0;cursor:grab;max-width:100%;} .bchip:hover{border-color:var(--navy);} .bnum{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;border-radius:50%;color:#fff;font-size:9px;font-weight:700;flex-shrink:0;} .dh{cursor:grab;color:#999;user-select:none;margin-right:3px;font-size:12px;} .mv{font-size:11px;padding:0 1px;border:1px solid var(--gray-light);border-radius:3px;background:#fff;color:var(--orange);cursor:pointer;} .mq{color:#999;font-size:10.5px;font-weight:400;} .ichip{cursor:grab;display:inline-block;font-size:11px;border:1px solid var(--gray-light);border-left:4px solid var(--gray);border-radius:4px;padding:2px 6px;margin:0 0 4px 0;cursor:pointer;width:100%;}
+  .prio-sel{font-size:11px;padding:3px 4px;font-weight:700;}
+  .prio-Forte{color:var(--red);} .prio-Moyenne{color:var(--amber);} .prio-Faible{color:var(--gray);}
+  .expbtn{cursor:pointer;color:var(--orange);font-weight:700;font-size:11px;white-space:nowrap;}
+  .exprow-i{background:#FBFCFE;border:1px solid var(--gray-light);border-top:none;border-radius:0 0 5px 5px;margin:-7px 0 8px;} .exprow td{background:#FBFCFE;}
+  .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,20,50,.45);z-index:50;align-items:center;justify-content:center;padding:20px;}
+  .modal-bg.open{display:flex;}
+  .modal{background:#fff;border-radius:8px;max-width:600px;width:100%;padding:22px 24px;box-shadow:0 10px 40px rgba(0,0,0,.25);max-height:92vh;overflow:auto;}
+  .modal h3{margin:0 0 2px;color:var(--navy);font-size:18px;} .modal .ctx{color:var(--gray);font-size:12.5px;margin-bottom:14px;}
+  .crit{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray-light);}
+  .crit .nm{font-weight:700;color:var(--navy);font-size:13px;} .crit .ds{color:var(--gray);font-size:11px;}
+  .rate{display:flex;gap:4px;} .rate button{width:30px;height:30px;border:1px solid var(--gray-light);background:#fff;border-radius:4px;font-weight:700;cursor:pointer;color:var(--gray-dark);}
+  .rate button.on{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;align-items:center;}
+  .compo{margin-top:12px;padding:10px 12px;background:var(--bg-soft);border-radius:6px;display:flex;align-items:center;gap:14px;} .compo .lbl{flex:1;font-size:12.5px;}
+  .inlineact{margin-top:14px;border-top:1px dashed var(--gray-light);padding-top:10px;}
+  .inlineact .t{color:var(--orange);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:5px;}
+  .actrow{display:grid;grid-template-columns:1fr 110px 92px 30px 24px;gap:5px;align-items:center;margin-bottom:5px;}
+  .actrow input,.actrow select{width:100%;padding:4px 6px;font-size:12px;}
+  .actrow .mrbox{text-align:center;} .actrow .x{text-align:center;color:var(--gray);cursor:pointer;}
+  .stratcard{border:1px solid var(--gray-light);border-top:3px solid var(--orange);border-radius:5px;background:#fff;padding:14px 16px;margin-bottom:14px;}
+  .stratcard h4{margin:0;color:var(--navy);font-size:16px;}
+  .stratcard .opps{margin:8px 0;display:flex;flex-wrap:wrap;gap:5px;}
+  .miniopp{font-size:11px;border:1px solid var(--gray-light);border-radius:10px;padding:2px 9px;color:var(--gray-dark);background:#fff;}
+  .miniopp .d{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:middle;}
+  .blk{margin:10px 0 0;} .blk .t{color:var(--orange);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;}
+  .blk ul{margin:4px 0 0 16px;padding:0;} .blk li{margin-bottom:3px;line-height:1.3;font-size:12.5px;}
+  .exportbox,.adminpanel{border:1px solid var(--gray-light);border-top:3px solid var(--orange);border-radius:6px;padding:14px 16px;background:#fff;margin-bottom:14px;}
+  .adminpanel{border-top-color:var(--navy);background:#FBFCFE;}
+  .exportbox h4,.adminpanel h4{margin:0 0 8px;color:var(--navy);font-size:14px;text-transform:uppercase;letter-spacing:.4px;}
+  .expgrid{display:flex;flex-wrap:wrap;gap:6px 18px;margin:8px 0;} .expgrid label{display:flex;align-items:center;gap:6px;font-size:12.5px;}
+  .addopp{display:grid;grid-template-columns:2fr 1.5fr 1.3fr 1fr auto auto;gap:6px;align-items:center;margin-top:6px;}
+  @media(max-width:820px){.addopp{grid-template-columns:1fr;}}
+  .verline{display:flex;align-items:center;gap:8px;font-size:12.5px;padding:5px 8px;border:1px solid var(--gray-light);border-radius:4px;margin-bottom:4px;} .verline .nm{flex:1;color:var(--navy);font-weight:700;} .verline .dt{color:var(--gray);font-size:11px;}
+  .crit-table{width:100%;border-collapse:collapse;background:#fff;font-size:12.5px;} .crit-table th,.crit-table td{border:1px solid var(--gray-light);padding:6px 9px;text-align:left;} .crit-table th{background:var(--navy);color:#fff;font-size:11px;text-transform:uppercase;}
+  footer.ft{margin-top:34px;border-top:1px solid var(--gray-light);padding-top:10px;color:var(--gray);font-size:11.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .corner{position:fixed;bottom:0;right:0;width:90px;height:4px;background:var(--orange);z-index:5;}
+  @media print{nav.tabs,.toolbar,.statusbar,.corner,.filters .btn,.rate,.exportbox,.adminpanel,.addmini{display:none!important;}.view{display:block!important;}}
+</style>
+</head>
+<body>
+<div class="corner"></div>
+<div class="app">
+  <header class="top">
+    <img class="logo" src="data:image/png;base64,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" alt="OPTA-S">
+    <div class="title-block">
+      <h1>Attractivité &amp; internationalisation des filières réunionnaises</h1>
+      <div class="subtitle">Atelier des référents filières — consolidation des deux études (offre exportable · stratégie d'attractivité)</div>
+      <div class="meta">Région Réunion — DGA DEI — Atelier du 2 juillet 2026 · Outil collaboratif OPTA-S — V8.0</div>
+    </div>
+    <div class="reglogo" id="regLogo"></div>
+  </header>
+  <div class="accent-bar"></div>
+  <div class="statusbar" id="statusbar">
+    <span class="dot-status"></span>
+    <span class="session-info" id="syncInfo"><strong>Mode local</strong> — pour le travail partagé en ligne, activer la configuration Firebase.</span>
+    <span class="adminbtn" id="adminBtn" onclick="toggleAdmin()">Mode animateur</span>
+    <span class="pill">REU-FILIERES-2607</span>
+  </div>
+  <nav class="tabs">
+    <button data-view="dash" class="active">Tableau de bord</button>
+    <button data-view="matrix">Matrice stratégique</button>
+    <button data-view="intl">Internationalisation</button>
+    <button data-view="attr">Attractivité / IDE</button>
+    <button data-view="strat">Plan d'action</button>
+    <button data-view="synth">Synthèse &amp; export</button>
+  </nav>
+
+  <section class="view active" id="view-dash">
+    <p class="lead">Cet atelier consolide <strong>deux études</strong> : l'<strong>offre exportable</strong> (potentiel à l'export) et la <strong>stratégie d'attractivité</strong>
+    (choix d'investissements directs étrangers). La <strong>Matrice stratégique</strong> réunit les deux et sert de cockpit : on y lit, complète et priorise filière par filière, et on y rattache directement les actions.</p>
+    <div class="flow">
+      <div class="step navyb"><div class="s">Cockpit</div><h4>Matrice stratégique</h4><p>Vue d'ensemble éditable (besoins/IDE + opportunités export), priorisation et actions inline, par filière.</p></div>
+      <div class="arr">·</div>
+      <div class="step"><div class="s">Volet 1</div><h4>Internationalisation</h4><p>56 opportunités notées par l'étude, révisables.</p></div>
+      <div class="arr">·</div>
+      <div class="step navyb"><div class="s">Volet 2</div><h4>Attractivité / IDE</h4><p>Briques manquantes = besoins d'investissement par filière (pré-chargés depuis l'étude, à compléter).</p></div>
+      <div class="arr">→</div>
+      <div class="step"><div class="s">Mise en œuvre</div><h4>Plan d'action &amp; synthèse</h4><p>Actions (porteur, échéance jusqu'à 2030+, marque Réunion), synthèse et exports.</p></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi" style="cursor:pointer" onclick="go('intl')"><div class="v" id="kOpp">56</div><div class="l">Opportunités export ›</div></div>
+      <div class="kpi alt" style="cursor:pointer" onclick="go('attr')"><div class="v" id="kIDE">0</div><div class="l">Besoins d'investissement / IDE ›</div></div>
+      <div class="kpi" style="cursor:pointer" onclick="go('matrix')"><div class="v" id="kRev">0</div><div class="l">Notes révisées / ajouts ›</div></div>
+      <div class="kpi alt" style="cursor:pointer" onclick="go('strat')"><div class="v" id="kAct">0</div><div class="l">Actions au plan ›</div></div>
+    </div>
+    <div class="toolbar" style="margin-top:14px;">
+      <button class="btn orange" onclick="go('matrix')">Ouvrir la matrice stratégique</button>
+      <button class="btn ghost" onclick="window.print()">Imprimer / PDF</button>
+      <span class="admin-only"><button class="btn danger" onclick="resetAll()">Réinitialiser</button></span>
+    </div>
+    <p class="small" style="margin-top:8px;">Mode animateur (code) : ajout d'opportunités, versions, réinitialisation.</p>
+  </section>
+
+  <section class="view" id="view-matrix">
+    <p class="lead">Réplique éditable de la matrice stratégique des filières prioritaires. Pour chaque filière : direction(s), <strong>besoins d'attractivité / IDE</strong> et <strong>opportunités d'internationalisation</strong>. Cliquez une pastille colorée pour noter sa priorité (5 critères) ; les couleurs traduisent les priorités. Le bouton « actions » ouvre, sous la ligne, les actions de la filière — sans changer d'onglet.</p>
+    <div class="toolbar"><span class="small" id="mtxCount"></span><span style="flex:1;"></span>
+      <span class="small">Couleur des étiquettes = priorité (note /10) : <span style="color:var(--red);font-weight:700">faible</span> · <span style="color:var(--amber);font-weight:700">modéré</span> · <span style="color:#7CB342;font-weight:700">bon</span> · <span style="color:var(--green);font-weight:700">fort</span> · gris = à noter</span>
+      <button class="btn ghost sm" onclick="window.print()">Imprimer / PDF</button></div>
+    <div class="matrix-wrap"><table class="mtx" id="mtxTable"></table></div>
+  </section>
+
+  <section class="view" id="view-intl">
+    <div class="adminpanel admin-only block">
+      <h4>Mode animateur — gestion de l'atelier</h4>
+      <div class="blk" style="margin-top:0;"><div class="t">Ajouter une opportunité export</div>
+        <div class="addopp">
+          <input id="aoProd" placeholder="Produit / service"><input id="aoMarch" placeholder="Marché">
+          <select id="aoFil"></select>
+          <select id="aoZone"><option value="zoi">Océan Indien</option><option value="eur">France / Europe</option><option value="aut">Autres marchés</option></select>
+          <label class="small" style="display:flex;align-items:center;gap:4px;"><input type="checkbox" id="aoTop"> top</label>
+          <button class="btn orange sm" onclick="addOpp()">Ajouter</button>
+        </div><div id="customList" style="margin-top:8px;"></div>
+      </div>
+      <div class="blk"><div class="t">Versions &amp; sauvegardes</div>
+        <div class="toolbar" style="margin:4px 0;">
+          <button class="btn sm" onclick="saveVersion()">Sauvegarder une version</button>
+          <button class="btn ghost sm" onclick="exportJSON()">Exporter (.json)</button>
+          <button class="btn ghost sm" onclick="document.getElementById('importFile').click()">Importer (.json)</button>
+          <input type="file" id="importFile" accept="application/json" style="display:none" onchange="importJSON(event)">
+        </div><div id="versionList"></div>
+      </div>
+    </div>
+    <p class="small" style="margin-bottom:8px;"><strong style="color:var(--navy)">Volet offre exportable.</strong> Clique une opportunité pour réviser sa note <em>et</em> lui rattacher des actions, sans changer d'onglet.</p>
+    <div class="filters">
+      <span><label>Filière</label><select id="fFil" onchange="renderPrio()"></select></span>
+      <span><label>Zone</label><select id="fZone" onchange="renderPrio()"><option value="">Toutes</option><option value="zoi">Océan Indien</option><option value="eur">France / Europe</option><option value="aut">Autres marchés</option></select></span>
+      <span><label>Tri</label><select id="fSort" onchange="renderPrio()"><option value="score">Poids économique (décroissant)</option><option value="rank">Rang de l'étude</option><option value="fil">Filière</option></select></span>
+      <label style="margin-left:6px;"><input type="checkbox" id="fTop" onchange="renderPrio()"> Top 6 étude</label>
+      <span style="flex:1;"></span><button class="btn ghost sm" onclick="toggleHeat()" id="heatBtn">Vue carte (filière × zone)</button>
+    </div>
+    <div class="small" style="margin-bottom:8px;">Poids économique : <span class="tag" style="background:var(--red);color:#fff;">faible</span> <span class="tag" style="background:var(--amber);color:#fff;">modéré</span> <span class="tag" style="background:#7CB342;color:#fff;">bon</span> <span class="tag" style="background:var(--green);color:#fff;">fort</span> · <span class="tag etude">étude</span> · <span class="tag revise">révisé</span> · <span class="tag cust">ajout</span> · <span class="tag top6">top 6</span></div>
+    <div id="oppList"></div>
+    <div id="heatWrap" style="display:none;"><p class="small">Chaque case : <b>nombre d'opportunités</b> de la filière sur la zone, et en dessous le <b>poids économique moyen /10</b>. La couleur reflète ce poids moyen (rouge → vert).</p><table class="heat" id="heatTable"></table></div>
+  </section>
+
+  <section class="view" id="view-attr">
+    <div class="panel navyb"><h4>Volet stratégie d'attractivité — briques manquantes (besoins d'investissement)</h4>
+      <p>Grille reprise de la colonne « besoins attractifs en IDE / briques manquantes ». Elle est <strong>pré-chargée</strong> avec les besoins déjà identifiés par l'étude attractivité (colonne « Transverse »), et reste à compléter et préciser en séance.</p></div>
+    <div class="toolbar"><span class="small" id="attrCount"></span><span style="flex:1;"></span><button class="btn ghost sm" onclick="window.print()">Imprimer / PDF</button></div>
+    <div id="attrTable"></div>
+  </section>
+
+  <section class="view" id="view-strat">
+    <p class="lead">Plan d'action consolidé — entièrement éditable et triable. Chaque action porte une filière, une opportunité ciblée, un porteur, une <strong>échéance (jusqu'à 2030+)</strong>, et peut être marquée <span class="tag mr">Marque Réunion</span> si elle contribue à la marque du territoire.</p>
+    <div class="panel"><h4>Leviers transverses prioritaires (étude)</h4>
+      <p>Renforcer l'expertise juridique à l'international ; lancer une aide à l'amorçage de l'export ; intégrer la dimension export dans le marketing territorial.</p></div>
+    <div class="toolbar" style="margin-bottom:8px;">
+      <button class="btn orange sm" onclick="addAction()">+ Ajouter une action</button>
+      <span class="small">Filière&nbsp;:</span><select id="gpFil" onchange="renderPlan()"><option value="">Toutes</option></select>
+      <span class="small">Tri&nbsp;:</span>
+      <select id="gpSort" onchange="renderPlan()"><option value="fil">Par filière</option><option value="porteur">Par porteur</option><option value="echeance">Par échéance</option><option value="src">Par source</option><option value="mr">Marque Réunion d'abord</option></select>
+      <label class="small"><input type="checkbox" id="gpMr" onchange="renderPlan()"> Marque Réunion seules</label>
+      <span style="flex:1;"></span>
+      <button class="btn ghost sm" onclick="exportPlanAll()">Exporter le plan</button>
+      <button class="btn ghost sm" onclick="window.print()">Imprimer / PDF</button>
+      <span class="small" id="planCount"></span>
+    </div>
+    <div id="planTable"></div>
+  </section>
+
+  <section class="view" id="view-synth">
+    <div class="exportbox">
+      <h4>Export par filière</h4>
+      <p class="small" style="margin:0 0 6px;">Cochez les filières, puis téléchargez : cartographie export, et plan d'action incluant besoins d'investissement / IDE.</p>
+      <div class="expgrid" id="expFils"></div>
+      <div class="toolbar" style="margin:6px 0 0;">
+        <button class="btn ghost sm" onclick="selAllFils(true)">Tout sélectionner</button>
+        <button class="btn ghost sm" onclick="selAllFils(false)">Tout désélectionner</button>
+        <span style="flex:1;"></span>
+        <button class="btn" onclick="exportCarto()">Cartographies export</button>
+        <button class="btn orange" onclick="exportPlanSel()">Plans d'action &amp; IDE</button>
+      </div>
+    </div>
+    <h2 class="sec">Synthèse globale</h2>
+    <div class="kpis" id="synthKpis"></div>
+    <h3 style="color:var(--orange);font-size:14px;text-transform:uppercase;letter-spacing:.4px;">Top 10 export — poids économique</h3>
+    <div id="synthTop"></div>
+    <h3 style="color:var(--orange);font-size:14px;text-transform:uppercase;letter-spacing:.4px;margin-top:18px;">Lecture par filière</h3>
+    <table class="synthtab" id="synthFilTable"></table>
+    <h2 class="sec">Synthèse par filière</h2>
+    <div id="synthCards"></div>
+  </section>
+
+  <footer class="ft">
+    <span>OPTA-S — Conseil en transformation des organisations publiques · Outil collaboratif d'atelier</span>
+    <span>Données : études « offre exportable » et « stratégie d'attractivité » de La Réunion (2025-2026).</span>
+  </footer>
+</div>
+
+<div class="modal-bg" id="modalBg"><div class="modal">
+  <h3 id="mTitle"></h3><div class="ctx" id="mCtx"></div>
+  <div id="besoinEdit" style="display:none;margin:0 0 12px"><label style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.3px">Intitulé du besoin / IDE</label><input id="besoinTxt" style="width:100%;margin-top:4px" placeholder="Besoin d'investissement…"></div>
+  <div id="oppMove" style="display:none;margin:0 0 12px;font-size:12px;color:var(--navy);font-weight:600">Classer cette opportunité dans : <select id="oppMoveFil" onchange="reclassOpp()" style="font-size:12px"></select> <select id="oppMoveZone" onchange="reclassOpp()" style="font-size:12px"><option value="zoi">Océan Indien</option><option value="eur">France / Europe</option><option value="aut">Autres marchés</option></select></div>
+  <div id="besMove" style="display:none;margin:0 0 12px;font-size:12px;color:var(--navy);font-weight:600">Rattacher ce besoin à : <select id="besMoveFil" onchange="reclassBesoin()" style="font-size:12px"></select></div>
+  <div id="critWrap"></div>
+  <div class="compo"><span class="scoredot sc-0" id="cDot">–</span><span class="lbl" id="cLbl"></span></div>
+  <div class="modal-actions">
+    <button class="btn ghost" onclick="closeModal()">Fermer</button>
+    <button class="btn danger sm" id="besoinDel" style="display:none" onclick="delBesoinFromModal()">Supprimer ce besoin</button>
+    <button class="btn danger sm" id="resetBtn" onclick="clearScore()">Rétablir note étude</button>
+    <button class="btn orange" onclick="saveScore()">Valider la note</button>
+  </div>
+  <div class="inlineact" id="inlineActWrap"><div class="t" id="inlineActTitle">Actions liées</div>
+    <div id="modalActs"></div>
+    <button class="btn ghost sm" style="margin-top:5px;" id="inlineActBtn" onclick="addActionInline()">+ Action</button>
+  </div>
+</div></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script>
+const SESSION_ID="REU-FILIERES-2607";
+const ADMIN_PIN="DGADEI@";
+const REGION_LOGO="data:image/png;base64,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";
+const FIREBASE_CONFIG={"apiKey": "AIzaSyA5gITAbHA6kqLSZYFhb8W_JRlmh3UPXXo", "authDomain": "atelier-filieres-reunion.firebaseapp.com", "databaseURL": "https://atelier-filieres-reunion-default-rtdb.europe-west1.firebasedatabase.app", "projectId": "atelier-filieres-reunion", "storageBucket": "atelier-filieres-reunion.firebasestorage.app", "messagingSenderId": "642152435325", "appId": "1:642152435325:web:afef69191aa03432bdeb14"};
+let DB=null,REMOTE_APPLYING=false,SYNC_T=null;
+
+const FILIERES={
+ agro:{nom:"Agroalimentaire",c:"--f-agro",dir:"DE / DTE"}, bati:{nom:"Bâti tropical / Aménagement durable",c:"--f-bati",dir:"DE / DD / DMD / DID"},
+ enr:{nom:"ENR & efficacité énergétique",c:"--f-enr",dir:"DD / DFDD"}, tour:{nom:"Tourisme",c:"--f-tour",dir:"DT"},
+ num:{nom:"Numérique",c:"--f-num",dir:"DRIT"}, image:{nom:"Industries de l'Image (ICC)",c:"--f-image",dir:"DATI"},
+ sante:{nom:"Santé · Pharmacie · Cosmétique",c:"--f-sante",dir:"DRIT"}, bleue:{nom:"Économie Bleue",c:"--f-bleue",dir:"DE"},
+ form:{nom:"Formation / Conseil",c:"--f-form",dir:"DHS / DPE / DFEA"}, autres:{nom:"Autres filières (environnement, circulaire…)",c:"--f-autres",dir:"—"},
+ care:{nom:"Le Care",c:"--gray",dir:"DRIT"},
+};
+const ZONES={zoi:"Océan Indien",eur:"France / Europe",aut:"Autres marchés"};
+const AZONES=[["zoi","Océan Indien"],["eur","France / Europe"],["aut","Autres marchés"],["trans","Transverse"]];
+const YEARS=["","2026","2027","2028","2029","2030","2030+","En continu"];
+
+const BASEOPPS = [{"n": 1, "prod": "Fruits, épices, épicerie fine", "march": "UE", "fil": "agro", "zone": "eur", "top6": true, "e": [5, 5, 5, 5, 5]}, {"n": 2, "prod": "Expertise, études (bâti tropical)", "march": "Bande intertropicale & Europe du Sud", "fil": "bati", "zone": "aut", "top6": true, "e": [5, 4, 5, 5, 5]}, {"n": 3, "prod": "Fruits, épices, épicerie fine", "march": "ZOI dont Afrique de l'Est", "fil": "agro", "zone": "zoi", "top6": true, "e": [5, 5, 3, 5, 5]}, {"n": 4, "prod": "Offre touristique régionale", "march": "Monde", "fil": "tour", "zone": "aut", "top6": true, "e": [5, 5, 3, 5, 5]}, {"n": 5, "prod": "Formation, certification", "march": "ZOI dont Afrique de l'Est", "fil": "form", "zone": "zoi", "top6": true, "e": [4, 4, 5, 5, 5]}, {"n": 6, "prod": "Rhums et spiritueux", "march": "Europe", "fil": "agro", "zone": "eur", "top6": true, "e": [5, 2, 5, 5, 5]}, {"n": 7, "prod": "Festivals", "march": "ZOI et Caraïbes", "fil": "image", "zone": "zoi", "top6": false, "e": [4, 3, 5, 5, 5]}, {"n": 8, "prod": "Produits frais et transformés de la mer", "march": "Europe", "fil": "bleue", "zone": "eur", "top6": false, "e": [4, 1, 5, 5, 5]}, {"n": 9, "prod": "Pêche australe", "march": "Monde", "fil": "bleue", "zone": "aut", "top6": false, "e": [5, 1, 3, 5, 5]}, {"n": 10, "prod": "Fruits, épices, épicerie fine", "march": "Asie", "fil": "agro", "zone": "aut", "top6": false, "e": [5, 2, 3, 5, 3]}, {"n": 11, "prod": "Expertise, études, conseil", "march": "ZOI dont Afrique de l'Est", "fil": "form", "zone": "zoi", "top6": false, "e": [2, 1, 5, 5, 5]}, {"n": 12, "prod": "Cinéma, radio et télévision", "march": "ZOI dont Afrique de l'Est", "fil": "image", "zone": "zoi", "top6": false, "e": [4, 3, 5, 1, 5]}, {"n": 13, "prod": "Cinéma, radio et télévision", "march": "Afrique francophone", "fil": "image", "zone": "aut", "top6": false, "e": [4, 3, 5, 1, 5]}, {"n": 14, "prod": "Expertise, études (énergies renouvelables)", "march": "Bande intertropicale & Europe du Sud", "fil": "enr", "zone": "aut", "top6": false, "e": [4, 2, 3, 5, 3]}, {"n": 15, "prod": "Chauffe-eaux solaires et équipements", "march": "ZOI dont Afrique de l'Est", "fil": "enr", "zone": "zoi", "top6": false, "e": [4, 2, 3, 5, 3]}, {"n": 16, "prod": "Fruits, épices, épicerie fine", "march": "Amérique du Nord", "fil": "agro", "zone": "aut", "top6": false, "e": [3, 5, 1, 5, 3]}, {"n": 17, "prod": "Recyclage métaux ferreux/non ferreux, plastiques", "march": "Inde, Asie", "fil": "autres", "zone": "aut", "top6": false, "e": [4, 2, 3, 5, 3]}, {"n": 18, "prod": "Cinéma, radio et télévision", "march": "Europe", "fil": "image", "zone": "eur", "top6": false, "e": [3, 2, 5, 1, 5]}, {"n": 19, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "Europe", "fil": "sante", "zone": "eur", "top6": false, "e": [3, 2, 5, 1, 5]}, {"n": 20, "prod": "Peinture, vernis, colle", "march": "Bande intertropicale", "fil": "bati", "zone": "aut", "top6": false, "e": [3, 1, 3, 5, 3]}, {"n": 21, "prod": "Recyclage métaux ferreux/non ferreux, plastiques", "march": "ZOI dont Afrique de l'Est", "fil": "autres", "zone": "zoi", "top6": false, "e": [4, 2, 3, 5, 1]}, {"n": 22, "prod": "Expertise en traitement et gestion de l'eau", "march": "Bande intertropicale", "fil": "autres", "zone": "aut", "top6": false, "e": [3, 1, 3, 5, 3]}, {"n": 23, "prod": "Produits frais et transformés de la mer", "march": "Amérique du Nord", "fil": "bleue", "zone": "aut", "top6": false, "e": [3, 1, 3, 5, 3]}, {"n": 24, "prod": "Digital et jeux vidéo", "march": "Japon", "fil": "num", "zone": "aut", "top6": false, "e": [4, 2, 3, 1, 5]}, {"n": 25, "prod": "E-sport", "march": "ZOI", "fil": "num", "zone": "zoi", "top6": false, "e": [2, 2, 5, 1, 5]}, {"n": 26, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "Maurice", "fil": "sante", "zone": "zoi", "top6": false, "e": [3, 2, 5, 1, 3]}, {"n": 27, "prod": "Digital et jeux vidéo", "march": "Amérique du Nord", "fil": "num", "zone": "aut", "top6": false, "e": [3, 2, 3, 1, 5]}, {"n": 28, "prod": "Digital et jeux vidéo", "march": "Europe dont Allemagne", "fil": "num", "zone": "eur", "top6": false, "e": [3, 2, 5, 1, 3]}, {"n": 29, "prod": "Digital et jeux vidéo", "march": "ZOI dont Afrique de l'Est", "fil": "num", "zone": "zoi", "top6": false, "e": [3, 2, 5, 1, 3]}, {"n": 30, "prod": "Digital et jeux vidéo", "march": "Afrique francophone", "fil": "num", "zone": "aut", "top6": false, "e": [3, 2, 3, 1, 5]}, {"n": 31, "prod": "Expertise et étude des milieux sous-marins", "march": "ZOI dont Afrique de l'Est", "fil": "bleue", "zone": "zoi", "top6": false, "e": [2, 1, 3, 5, 3]}, {"n": 32, "prod": "Chauffe-eaux solaires", "march": "Amérique du Nord", "fil": "enr", "zone": "aut", "top6": false, "e": [2, 1, 1, 5, 5]}, {"n": 33, "prod": "Expertise, études, conseil", "march": "Europe", "fil": "form", "zone": "eur", "top6": false, "e": [1, 1, 5, 1, 5]}, {"n": 34, "prod": "Équipements BTP", "march": "ZOI dont Afrique de l'Est", "fil": "bati", "zone": "zoi", "top6": false, "e": [2, 2, 1, 5, 3]}, {"n": 35, "prod": "Cinéma, radio et télévision", "march": "Amérique du Nord", "fil": "image", "zone": "aut", "top6": false, "e": [3, 1, 3, 1, 5]}, {"n": 36, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "Antilles / Guyane", "fil": "sante", "zone": "aut", "top6": false, "e": [3, 1, 3, 1, 5]}, {"n": 37, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "ZOI dont Afrique de l'Est", "fil": "sante", "zone": "zoi", "top6": false, "e": [3, 2, 3, 1, 3]}, {"n": 38, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "Singapour", "fil": "sante", "zone": "aut", "top6": false, "e": [3, 2, 3, 1, 3]}, {"n": 39, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "Hong Kong", "fil": "sante", "zone": "aut", "top6": false, "e": [3, 2, 3, 1, 3]}, {"n": 40, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "EAU", "fil": "sante", "zone": "aut", "top6": false, "e": [3, 2, 3, 1, 3]}, {"n": 41, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "Amérique du Nord", "fil": "sante", "zone": "aut", "top6": false, "e": [3, 1, 1, 1, 3]}, {"n": 42, "prod": "Expertise, études, conseil", "march": "Asie", "fil": "form", "zone": "aut", "top6": false, "e": [1, 1, 3, 1, 3]}, {"n": 43, "prod": "Expertise, études, conseil", "march": "Amérique du Nord", "fil": "form", "zone": "aut", "top6": false, "e": [1, 1, 3, 1, 3]}, {"n": 44, "prod": "Formation, certification", "march": "Inde", "fil": "form", "zone": "aut", "top6": false, "e": [3, 2, 1, 1, 3]}, {"n": 45, "prod": "Formation, certification", "march": "Australie", "fil": "form", "zone": "aut", "top6": false, "e": [3, 2, 1, 1, 3]}, {"n": 46, "prod": "Chauffe-eaux solaires", "march": "Bande intertropicale", "fil": "enr", "zone": "aut", "top6": false, "e": [2, 1, 1, 5, 1]}, {"n": 47, "prod": "Cinéma, radio et télévision", "march": "Amérique du Sud", "fil": "image", "zone": "aut", "top6": false, "e": [2, 1, 3, 1, 3]}, {"n": 48, "prod": "Produits pharma, cosmétiques & technologiques (Nano)", "march": "Asie", "fil": "sante", "zone": "aut", "top6": false, "e": [3, 1, 3, 1, 3]}, {"n": 49, "prod": "Activités de maintenance", "march": "ZOI dont Afrique de l'Est", "fil": "autres", "zone": "zoi", "top6": false, "e": [2, 2, 3, 1, 3]}, {"n": 50, "prod": "Cinéma, radio et télévision", "march": "Thaïlande", "fil": "image", "zone": "aut", "top6": false, "e": [3, 1, 3, 1, 3]}, {"n": 51, "prod": "Cinéma, radio et télévision", "march": "Japon", "fil": "image", "zone": "aut", "top6": false, "e": [3, 1, 1, 1, 5]}, {"n": 52, "prod": "Radio (musique)", "march": "Afrique du Sud", "fil": "image", "zone": "aut", "top6": false, "e": [3, 1, 3, 1, 3]}, {"n": 53, "prod": "Cinéma, radio et télévision", "march": "Chine", "fil": "image", "zone": "aut", "top6": false, "e": [3, 1, 3, 1, 3]}, {"n": 54, "prod": "Sports et loisirs (expertise et conseil)", "march": "ZOI dont Afrique de l'Est", "fil": "tour", "zone": "zoi", "top6": false, "e": [3, 1, 3, 1, 3]}, {"n": 55, "prod": "Formation, certification", "march": "Afrique du Sud", "fil": "form", "zone": "aut", "top6": false, "e": [3, 2, 3, 1, 3]}, {"n": 56, "prod": "Fruits, épices, épicerie fine", "march": "Moyen-Orient", "fil": "agro", "zone": "aut", "top6": false, "e": [3, 5, 3, 5, 3]}];
+
+/* Besoins d'investissement / briques manquantes pré-chargés (étude attractivité — Mapping des segments) */
+const SEED_ATTRACT={
+ agro:[["Organisation des circuits alimentaires locaux",[3,4,3,4,4]],["Inventaire du potentiel végétal et innovation",[3,4,3,4,3]]],
+ bati:[["Développement de l'ingénierie bâti tropical & smart cities",[4,4,4,4,3]],["Structuration de la filière « maisons en kit »",[3,3,3,3,3]]],
+ enr:[["Soutien à la filière déchets (DEEE, recyclage, métaux)",[3,4,3,4,3]]],
+ tour:[["Hébergements de large capacité (lits marchands — objectif SDATR 18-20 000)",[5,4,5,5,3]],["Implantation d'une grande chaîne hôtelière internationale (distribution digitale)",[5,4,5,5,4]],["Réhabilitation / entretien des pistes VTT labellisées (1 400 km → 70 km en 2018)",[3,4,3,3,4]],["Structuration loisirs & sports de nature (VTT, vol libre, trail) ; accès croisière ; qualification des sites de randonnée",[3,4,4,4,3]],["Cluster « tourisme innovant » (type Welcome City Lab) à l'échelle de l'océan Indien",[4,4,4,4,3]]],
+ num:[["Formation aux métiers de la production audiovisuelle / numérique",[3,3,3,4,4]]],
+ image:[["Studios de production / post-production et lieux de tournage équipés",[4,4,5,4,3]],["Financement des productions (notamment courts-métrages)",[3,3,4,4,3]]],
+ sante:[["Anticipation du vieillissement (264 000 ≥ 60 ans en 2050) : pensions, santé, hébergements",[4,3,3,5,3]],["Développement du maintien à domicile",[4,3,3,5,4]]],
+ care:[["Structuration des activités, services et produits de soins aux personnes (vieillissement, précarité)",[4,3,3,5,3]]],
+ bleue:[["Transport maritime régional multimodal (agrégats, sables, matériaux BTP, colis lourds, déchets) — Invest OI",[5,4,3,4,3]]],
+ autres:[["Maintenance industrielle préventive & autoformation sur équipements (tension de recrutement)",[3,3,2,3,4]],["Développement de l'aéroport de Pierrefonds (trafic océan Indien, aviation d'affaires, diversification)",[4,4,3,4,2]]],
+ form:[],
+};
+const CRITS=[["valeur","Potentiel valeur / emploi local","Très faible → important"],["entreprises","Nombre d'entreprises concernées","0-5 → 51-100"],["acces","Accessibilité physique du marché","Faible → bonne"],["maturite","Maturité de la filière","Émergente → établie"],["business","Facilité de faire des affaires","Faible → forte"]];
+const CRITS_ATTR=[["accesmarche","Accès au marché / position de hub régional",""],["facteurs","Facteurs de production & aménités (atouts compétitifs)",""],["marque","Contribution à la marque « La Réunion »",""],["segment","Segment porteur (filière à potentiel mondial)",""],["faisab","Faisabilité / maturité du projet",""]];
+let curCrits=CRITS,curMode="opp",curBesoin=null;
+function compositeAttr(id){const s=(STATE.attractScore||{})[id];if(!s)return null;const v=CRITS_ATTR.map(c=>s[c[0]]||0);if(v.some(x=>x===0))return null;return Math.round(v.reduce((a,b)=>a+b,0)/25*10*10)/10;}
+const ACTIONS={
+ agro:["Solutions logistiques mutualisables (groupage, entreposage) vers l'Europe","Zone d'activité dédiée à l'export (zone industrialo-portuaire)","Force de vente partagée","Financer l'amorçage de l'export (fret sur 2 ans)"],
+ bati:["Renforcer la veille et la réponse aux AO / AAP internationaux","Clusters thématiques (force de frappe collective)","S'adosser à des groupes internationaux sur les grands AO"],
+ enr:["Clusters bâti tropical & ENR pour l'export","S'adosser à des groupes internationaux sur les chantiers structurants"],
+ num:["Aides adaptées aux associations, TPE et indépendants","Catalogue des entreprises, talents et productions"],
+ image:["Catalogue (films, musique…) pour promouvoir l'offre groupée","Mettre les festivals au service de la promotion des projets"],
+ form:["Catalogue des offres de formation du territoire","Coupler conseil et formation dans l'approche client","Mobiliser la diaspora à l'étranger"],
+ sante:[],bleue:[],tour:[],autres:[],care:[],
+};
+
+let STATE=loadState();
+function loadState(){try{const r=localStorage.getItem("optas_atelier_v7");if(r)return norm(JSON.parse(r));}catch(e){} return norm({});}
+function norm(s){s=s||{};s.scores=s.scores||{};s.attract=s.attract||{};s.actions=s.actions||[];s.custom=s.custom||[];s.versions=s.versions||[];s.prio=s.prio||{};s.move=s.move||{};s.attractScore=s.attractScore||{};Object.keys(s.attract).forEach(fk=>{let v=s.attract[fk];if(v&&!Array.isArray(v))v=[].concat.apply([],Object.keys(v).map(k=>v[k]||[]));let _arr=(v||[]).map(it=>(it&&typeof it==="object")?it:{id:uid(),t:String(it)});const _seen={};s.attract[fk]=_arr.filter(it=>{const k=(it.t||"").trim().toLowerCase();if(!k)return true;if(_seen[k])return false;_seen[k]=1;return true;});});return s;}
+function saveState(){try{localStorage.setItem("optas_atelier_v7",JSON.stringify(STATE));}catch(e){} pushRemote();}
+function seedAll(){let ch=false;
+  if(!STATE.seeded){STATE.actions=STATE.actions||[];Object.keys(ACTIONS).forEach(fk=>(ACTIONS[fk]||[]).forEach(a=>STATE.actions.push({id:uid(),fil:fk,opp:null,a,p:"",e:"",src:"etude",mr:false})));STATE.seeded=true;ch=true;}
+  if(!STATE.seededAttract){Object.keys(SEED_ATTRACT).forEach(fk=>{const arr=SEED_ATTRACT[fk]||[];if(arr.length){STATE.attract[fk]=STATE.attract[fk]||[];arr.forEach(e=>{const id=uid();STATE.attract[fk].push({id,t:e[0]});if(e[1]){const sc={};CRITS_ATTR.forEach((c,i)=>sc[c[0]]=e[1][i]);STATE.attractScore[id]=sc;}});}});STATE.seededAttract=true;ch=true;}
+  if(ch)saveState();}
+seedAll();
+
+function ALLOPPS(){return BASEOPPS.concat(STATE.custom||[]).map(o=>{const m=(STATE.move||{})[o.n];return m?Object.assign({},o,{fil:m.fil||o.fil,zone:m.zone||o.zone}):o;});}
+function getOpp(n){return ALLOPPS().find(o=>String(o.n)===String(n));}
+function nextN(){return Math.max(0,...ALLOPPS().map(o=>+o.n))+1;}
+function uid(){return 'a'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+function vals(n){const s=STATE.scores[n];if(s){const v=CRITS.map(c=>s[c[0]]||0);if(v.every(x=>x>0))return{v,src:"revise"};}const o=getOpp(n);const e=o&&o.e;if(e&&e.length===5)return{v:e,src:"etude"};return null;}
+function composite(n){const r=vals(n);if(!r)return null;return Math.round(r.v.reduce((a,b)=>a+b,0)/25*10*10)/10;}
+function scoreSrc(n){const o=getOpp(n);if(o&&o.custom&&!STATE.scores[n])return"cust";const r=vals(n);return r?r.src:(o&&o.custom?"cust":null);}
+function scoreClass(s){if(s==null)return"sc-0";if(s<4)return"sc-r";if(s<6)return"sc-o";if(s<8)return"sc-l";return"sc-g";}
+function cvar(v){if(v&&v[0]==="#")return v;return getComputedStyle(document.documentElement).getPropertyValue(v).trim()||v;}
+const SCMAP={'sc-r':'--red','sc-o':'--amber','sc-l':'#7CB342','sc-g':'--green','sc-0':'--gray'};
+function esc(s){return(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));}
+function attractCount(){let n=0;Object.values(STATE.attract||{}).forEach(a=>(a||[]).forEach(it=>{if(((it&&it.t)||'').trim())n++;}));return n;}
+function actsOf(fil,opp,bes){return (STATE.actions||[]).filter(a=>bes?String(a.bes)===String(bes):(opp!=null?String(a.opp)===String(opp):a.fil===fil));}
+
+function refreshKpis(){const all=ALLOPPS();
+  document.getElementById("kOpp").textContent=all.length;
+  document.getElementById("kIDE").textContent=attractCount();
+  document.getElementById("kRev").textContent=Object.keys(STATE.scores).filter(n=>{const s=STATE.scores[n];return s&&CRITS.every(c=>s[c[0]]>0);}).length+(STATE.custom||[]).length;
+  document.getElementById("kAct").textContent=(STATE.actions||[]).filter(a=>(a.a||'').trim()).length;}
+
+/* ADMIN */
+let adminOn=false;
+function toggleAdmin(){if(adminOn){adminOn=false;document.body.classList.remove("admin");document.getElementById("adminBtn").textContent="Mode animateur";return;}
+  const p=prompt("Code animateur :");if(p===null)return;if(p===ADMIN_PIN){adminOn=true;document.body.classList.add("admin");document.getElementById("adminBtn").textContent="Animateur ✓";renderCustomList();renderVersions();}else alert("Code incorrect.");}
+function buildAddFilSelect(){const s=document.getElementById("aoFil");if(s)s.innerHTML=Object.keys(FILIERES).map(k=>`<option value="${k}">${FILIERES[k].nom}</option>`).join("");}
+function addOpp(){const prod=document.getElementById("aoProd").value.trim(),march=document.getElementById("aoMarch").value.trim();if(!prod||!march){alert("Produit et marché requis.");return;}
+  STATE.custom.push({n:nextN(),prod,march,fil:document.getElementById("aoFil").value,zone:document.getElementById("aoZone").value,top6:document.getElementById("aoTop").checked,custom:true});
+  saveState();document.getElementById("aoProd").value="";document.getElementById("aoMarch").value="";document.getElementById("aoTop").checked=false;renderCustomList();renderPrio();}
+function delCustom(n){STATE.custom=STATE.custom.filter(o=>String(o.n)!==String(n));delete STATE.scores[n];saveState();renderCustomList();renderPrio();}
+function renderCustomList(){const el=document.getElementById("customList");if(!el)return;const c=STATE.custom||[];el.innerHTML=c.length?('<div class="small">Opportunités ajoutées :</div>'+c.map(o=>`<div class="verline"><span class="nm">#${o.n} ${esc(o.prod)} × ${esc(o.march)}</span><span class="dt">${FILIERES[o.fil].nom}</span><span class="x" style="color:var(--red);cursor:pointer" onclick="delCustom('${o.n}')">suppr.</span></div>`).join("")):'<div class="small">Aucune.</div>';}
+function snapshot(){return JSON.parse(JSON.stringify({scores:STATE.scores,attract:STATE.attract,attractScore:STATE.attractScore,actions:STATE.actions,custom:STATE.custom,prio:STATE.prio,seeded:STATE.seeded,seededAttract:STATE.seededAttract}));}
+function applySnapshot(d){STATE=norm(d);STATE.seeded=d.seeded!==false;STATE.seededAttract=d.seededAttract!==false;saveState();rerenderAll();}
+function saveVersion(){const name=prompt("Nom de la version :","Version "+((STATE.versions||[]).length+1));if(!name)return;STATE.versions.push({name,date:new Date().toLocaleString('fr-FR'),data:snapshot()});saveState();renderVersions();}
+function loadVersion(i){if(!confirm("Charger cette version ?"))return;applySnapshot(STATE.versions[i].data);}
+function delVersion(i){STATE.versions.splice(i,1);saveState();renderVersions();}
+function renderVersions(){const el=document.getElementById("versionList");if(!el)return;const v=STATE.versions||[];el.innerHTML=v.length?v.map((x,i)=>`<div class="verline"><span class="nm">${esc(x.name)}</span><span class="dt">${x.date}</span><button class="btn ghost sm" onclick="loadVersion(${i})">Charger</button><span class="x" style="color:var(--red);cursor:pointer" onclick="delVersion(${i})">×</span></div>`).join(""):'<div class="small">Aucune version.</div>';}
+function exportJSON(){dl("Atelier_filieres_sauvegarde.json",JSON.stringify({app:"optas_atelier",date:new Date().toISOString(),state:snapshot(),versions:STATE.versions||[]},null,2),"application/json");}
+function importJSON(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const j=JSON.parse(r.result);if(j.state)applySnapshot(j.state);if(j.versions){STATE.versions=j.versions;saveState();renderVersions();}alert("Importé.");}catch(e){alert("Fichier invalide.");}};r.readAsText(f);ev.target.value="";}
+
+/* INTERNATIONALISATION */
+function buildFilterFil(){const sel=document.getElementById("fFil");const cur=sel.value;let h='<option value="">Toutes filières</option>';
+  Object.keys(FILIERES).forEach(k=>{const c=ALLOPPS().filter(o=>o.fil===k).length;if(c)h+=`<option value="${k}">${FILIERES[k].nom} (${c})</option>`;});sel.innerHTML=h;sel.value=cur;}
+function renderPrio(){
+  const ff=document.getElementById("fFil").value,fz=document.getElementById("fZone").value,fs=document.getElementById("fSort").value,ft=document.getElementById("fTop").checked;
+  let list=ALLOPPS().filter(o=>(!ff||o.fil===ff)&&(!fz||o.zone===fz)&&(!ft||o.top6));
+  if(fs==="rank")list=list.slice().sort((a,b)=>a.n-b.n);
+  else if(fs==="fil")list=list.slice().sort((a,b)=>FILIERES[a.fil].nom.localeCompare(FILIERES[b.fil].nom)||(composite(b.n)??-1)-(composite(a.n)??-1));
+  else list=list.slice().sort((a,b)=>((composite(b.n)??-1)-(composite(a.n)??-1))||a.n-b.n);
+  document.getElementById("oppList").innerHTML=list.map(o=>oppHtml(o)+(String(expandedOpp)===String(o.n)?oppActsHtml(o):"")).join("")||'<p class="small">Aucune opportunité pour ce filtre.</p>';if(expandedOpp&&getOpp(expandedOpp))renderActs("iact-"+expandedOpp,null,expandedOpp);
+  refreshKpis();renderHeat();}
+function oppHtml(o){const sc=composite(o.n),cls=scoreClass(sc),src=scoreSrc(o.n),fcol=cvar(FILIERES[o.fil].c);
+  const st=src==="revise"?'<span class="tag revise">révisé</span>':src==="etude"?'<span class="tag etude">étude</span>':src==="cust"?'<span class="tag cust">ajout</span>':'<span class="tag na">à évaluer</span>';
+  const na=actsOf(null,o.n).filter(a=>(a.a||'').trim()).length;
+  return `<div class="opp ${o.top6?'t6':''}" style="border-left-color:${fcol}" onclick="openScore('${o.n}')">
+    <div class="rank">${o.n}<small>${o.custom?'ajout':'rang'}</small></div>
+    <div class="score"><span class="scoredot ${cls}">${sc!=null?sc:'–'}</span></div>
+    <div class="main"><div class="pl">${esc(o.prod)}</div><div class="mk">marché : <b>${esc(o.march)}</b></div>
+      <div class="meta"><span class="chip" style="background:${fcol}">${FILIERES[o.fil].nom}</span><span class="zchip ${o.zone}">${ZONES[o.zone]}</span>${o.top6?'<span class="tag top6">top 6</span>':''}${st}<span class="tag" style="background:var(--navy);color:#fff;cursor:pointer" onclick="event.stopPropagation();toggleOpp('${o.n}')">${na} action${na!=1?'s':''} ${String(expandedOpp)===String(o.n)?'▾':'▸'}</span></div></div>
+    <div class="score"><div class="grade">${sc!=null?('<b>'+sc+'</b> / 10'):'<span style="color:var(--orange);font-weight:700;">à noter</span>'}</div></div></div>`;}
+function oppActsHtml(o){return `<div class="exprow-i"><div class="inlineact" style="margin:0;border:0;padding:6px 10px 10px"><div class="t">Actions — ${esc(o.prod)} × ${esc(o.march)}</div><div id="iact-${o.n}"></div><button class="btn ghost sm" onclick="addActionForOpp('${o.n}')">+ Action sur cette opportunité</button></div></div>`;}
+function toggleOpp(n){expandedOpp=String(expandedOpp)===String(n)?null:String(n);renderPrio();}
+function addActionForOpp(n){const o=getOpp(n);STATE.actions.push({id:uid(),fil:o.fil,opp:n,a:"",p:"",e:"",src:"atelier",mr:false});saveState();expandedOpp=String(n);renderPrio();}
+let heatOn=false;
+function toggleHeat(){heatOn=!heatOn;document.getElementById("heatWrap").style.display=heatOn?"block":"none";document.getElementById("oppList").style.display=heatOn?"none":"block";document.getElementById("heatBtn").textContent=heatOn?"Vue liste":"Vue carte (filière × zone)";renderHeat();}
+function renderHeat(){if(!heatOn)return;let h="<thead><tr><th>Filière</th>";Object.keys(ZONES).forEach(z=>h+=`<th>${ZONES[z]}</th>`);h+="<th>Total</th></tr></thead><tbody>";
+  Object.keys(FILIERES).forEach(fk=>{const inFil=ALLOPPS().filter(o=>o.fil===fk);if(!inFil.length)return;h+=`<tr><td class="fl">${FILIERES[fk].nom}</td>`;
+    Object.keys(ZONES).forEach(z=>{const cell=inFil.filter(o=>o.zone===z);if(!cell.length){h+=`<td class="cell e">·</td>`;return;}const scs=cell.map(o=>composite(o.n)).filter(x=>x!=null);const avg=scs.length?Math.round(scs.reduce((a,b)=>a+b,0)/scs.length*10)/10:null;const bg=avg==null?cvar("--gray-light"):cvar(SCMAP[scoreClass(avg)]);h+=`<td class="cell" style="background:${bg};color:${avg==null?'var(--gray)':'#fff'}" title="${cell.length} opportunité(s)${avg!=null?', poids économique moyen '+avg+'/10':''}"><b>${cell.length}</b> opp.${avg!=null?`<div style="font-size:9.5px;opacity:.9">${avg}/10</div>`:''}</td>`;});
+    h+=`<td class="cell" style="background:var(--navy)">${inFil.length}</td></tr>`;});h+="</tbody>";document.getElementById("heatTable").innerHTML=h;}
+
+let curOpp=null,draft=null,expandedOpp=null,DRAG=null;
+function critRows(){document.getElementById("critWrap").innerHTML=curCrits.map(c=>`<div class="crit"><div><div class="nm">${c[1]}</div><div class="ds">${c[2]||''}</div></div><div class="rate" data-k="${c[0]}">${[1,2,3,4,5].map(v=>`<button onclick="rate('${c[0]}',${v})" class="${draft[c[0]]===v?'on':''}">${v}</button>`).join("")}</div></div>`).join("");}
+function openScore(n){curMode='opp';curCrits=CRITS;curOpp=n;const o=getOpp(n);draft={valeur:0,entreprises:0,acces:0,maturite:0,business:0};
+  const base=STATE.scores[n]||(o.e?{valeur:o.e[0],entreprises:o.e[1],acces:o.e[2],maturite:o.e[3],business:o.e[4]}:null);
+  if(base)CRITS.forEach(c=>draft[c[0]]=base[c[0]]||0);
+  document.getElementById("mTitle").textContent=o.prod;
+  document.getElementById("mCtx").innerHTML=`Marché : <b>${esc(o.march)}</b> · ${FILIERES[o.fil].nom} · ${ZONES[o.zone]} ${o.top6?'· <span class="tag top6">top 6</span>':''}`;
+  critRows();
+  document.getElementById("resetBtn").style.display=(STATE.scores[n]&&o.e)?"inline-block":"none";
+  document.getElementById("besoinEdit").style.display="none";document.getElementById("besoinDel").style.display="none";
+  const bm0=document.getElementById("besMove");if(bm0)bm0.style.display="none";const om=document.getElementById("oppMove");if(om){om.style.display="";document.getElementById("oppMoveFil").innerHTML=Object.keys(FILIERES).map(fk=>`<option ${o.fil===fk?'selected':''} value="${fk}">${FILIERES[fk].nom}</option>`).join("");document.getElementById("oppMoveZone").value=o.zone;}
+  const ia=document.getElementById("inlineActWrap");if(ia)ia.style.display="";
+  document.getElementById("inlineActTitle").textContent="Actions liées à cette opportunité";document.getElementById("inlineActBtn").textContent="+ Action sur cette opportunité";
+  updateCompo();renderActs("modalActs",null,n);document.getElementById("modalBg").classList.add("open");}
+function openBesoin(id){curMode='besoin';curCrits=CRITS_ATTR;curBesoin=id;draft={};CRITS_ATTR.forEach(c=>draft[c[0]]=0);
+  const base=(STATE.attractScore||{})[id];if(base)CRITS_ATTR.forEach(c=>draft[c[0]]=base[c[0]]||0);
+  let txt='',fil='';Object.keys(STATE.attract).forEach(fk=>(STATE.attract[fk]||[]).forEach(it=>{if(it.id===id){txt=it.t;fil=fk;}}));
+  document.getElementById("mTitle").textContent="Besoin d'investissement / IDE";
+  document.getElementById("mCtx").innerHTML=`${fil?FILIERES[fil].nom:''} — éditer l'intitulé, noter la priorité (5 leviers) ou supprimer`;
+  document.getElementById("besoinEdit").style.display="";document.getElementById("besoinTxt").value=txt;
+  critRows();
+  document.getElementById("resetBtn").style.display="none";document.getElementById("besoinDel").style.display="inline-block";
+  const om=document.getElementById("oppMove");if(om)om.style.display="none";
+  const bm=document.getElementById("besMove");if(bm){bm.style.display="";document.getElementById("besMoveFil").innerHTML=Object.keys(FILIERES).map(k=>`<option ${fil===k?'selected':''} value="${k}">${FILIERES[k].nom}</option>`).join("");}
+  const ia=document.getElementById("inlineActWrap");if(ia)ia.style.display="";
+  document.getElementById("inlineActTitle").textContent="Actions liées à ce besoin";document.getElementById("inlineActBtn").textContent="+ Action sur ce besoin";renderActs("modalActs",null,null,curBesoin);
+  updateCompo();document.getElementById("modalBg").classList.add("open");}
+function rate(k,v){draft[k]=v;document.querySelectorAll(`.rate[data-k="${k}"] button`).forEach((b,i)=>b.classList.toggle("on",i+1===v));updateCompo();}
+function updateCompo(){const v=curCrits.map(c=>draft[c[0]]||0);const done=v.every(x=>x>0);const sc=done?Math.round(v.reduce((a,b)=>a+b,0)/25*10*10)/10:null;const dot=document.getElementById("cDot");dot.className="scoredot "+scoreClass(sc);dot.textContent=sc!=null?sc:'–';document.getElementById("cLbl").textContent=sc!=null?`${curMode==='besoin'?'Priorité (poids)':'Poids économique'} : ${sc} / 10`:"Notez les 5 critères.";}
+function saveScore(){if(curMode==='besoin'){const txt=document.getElementById("besoinTxt").value;Object.keys(STATE.attract).forEach(k=>(STATE.attract[k]||[]).forEach(it=>{if(it.id===curBesoin)it.t=txt;}));const v=CRITS_ATTR.map(c=>draft[c[0]]||0);STATE.attractScore=STATE.attractScore||{};if(v.every(x=>x>0))STATE.attractScore[curBesoin]=Object.assign({},draft);else if(STATE.attractScore)delete STATE.attractScore[curBesoin];saveState();renderAttract();renderMatrix();aco();closeModal();return;}const v=curCrits.map(c=>draft[c[0]]||0);if(v.some(x=>x===0)){alert("Notez les 5 critères.");return;}STATE.scores[curOpp]=Object.assign({},draft);saveState();renderPrio();renderMatrix();alert("Note enregistrée.");}
+function clearScore(){delete STATE.scores[curOpp];saveState();closeModal();renderPrio();renderMatrix();}
+function delBesoinFromModal(){if(!confirm("Supprimer ce besoin ?"))return;Object.keys(STATE.attract).forEach(k=>{STATE.attract[k]=(STATE.attract[k]||[]).filter(it=>it.id!==curBesoin);});if(STATE.attractScore)delete STATE.attractScore[curBesoin];saveState();closeModal();renderAttract();renderMatrix();aco();}
+function closeModal(){document.getElementById("modalBg").classList.remove("open");}
+function addActionForCurrent(){const o=getOpp(curOpp);STATE.actions.push({id:uid(),fil:o.fil,opp:curOpp,a:"",p:"",e:"",src:"atelier",mr:false});saveState();renderActs("modalActs",null,curOpp);renderPrio();}
+function addActionInline(){if(curMode==='besoin')addActionForBesoin(curBesoin);else addActionForCurrent();}
+function addActionForBesoin(besId){let fk=null;Object.keys(STATE.attract).forEach(k=>(STATE.attract[k]||[]).forEach(it=>{if(it.id===besId)fk=k;}));STATE.actions.push({id:uid(),fil:fk||Object.keys(FILIERES)[0],opp:null,bes:besId,a:"",p:"",e:"",src:"atelier",mr:false});saveState();renderActs("modalActs",null,null,besId);renderMatrix();renderAttract();}
+function reclassOpp(){if(curOpp==null)return;const fk=document.getElementById("oppMoveFil").value,z=document.getElementById("oppMoveZone").value;STATE.move=STATE.move||{};STATE.move[curOpp]={fil:fk,zone:z};const o=getOpp(curOpp);document.getElementById("mCtx").innerHTML=`Marché : <b>${esc(o.march)}</b> · ${FILIERES[o.fil].nom} · ${ZONES[o.zone]} ${o.top6?'· <span class="tag top6">top 6</span>':''}`;saveState();renderMatrix();renderPrio();}
+function reclassBesoin(){if(!curBesoin)return;const tgt=document.getElementById("besMoveFil").value;let cur=null;Object.keys(STATE.attract).forEach(k=>(STATE.attract[k]||[]).forEach(it=>{if(it.id===curBesoin)cur=k;}));if(!cur||cur===tgt)return;const arr=STATE.attract[cur];const idx=arr.findIndex(x=>x.id===curBesoin);if(idx<0)return;const it=arr.splice(idx,1)[0];STATE.attract[tgt]=STATE.attract[tgt]||[];STATE.attract[tgt].push(it);saveState();renderAttract();renderMatrix();aco();document.getElementById("mCtx").innerHTML=`${FILIERES[tgt].nom} — éditer l'intitulé, noter la priorité (5 leviers), rattacher ou supprimer`;}
+document.getElementById("modalBg").addEventListener("click",e=>{if(e.target.id==="modalBg")closeModal();});
+
+/* ATTRACTIVITE */
+function uitemHtml(fk,it){const sc=compositeAttr(it.id);return `<span class="bchip" draggable="true" ondragstart="dragBesoin(event,'${fk}','${it.id}')" onclick="openBesoin('${it.id}')" title="Cliquer pour éditer / noter / supprimer · glisser pour changer de filière"><span class="bnum ${scoreClass(sc)}">${sc!=null?sc:'·'}</span>${esc(it.t)||'<i style=&quot;color:#999&quot;>(besoin vide)</i>'}</span>`;}
+function moveFilOptions(cur){return Object.keys(FILIERES).filter(k=>k!==cur).map(k=>`<option value="${k}">${FILIERES[k].nom}</option>`).join("");}
+function moveBesoin(fromFk,id,toFk){if(!toFk)return;const arr=STATE.attract[fromFk]||[];const idx=arr.findIndex(x=>x.id===id);if(idx<0)return;const it=arr.splice(idx,1)[0];STATE.attract[toFk]=STATE.attract[toFk]||[];STATE.attract[toFk].push(it);saveState();renderAttract();renderMatrix();aco();}
+function renderAttract(){let h=`<div class="matrix-wrap"><table class="attrtab"><thead><tr><th style="width:240px">Filière</th><th>Besoins d'investissement / IDE (briques manquantes) — glisser une étiquette vers une autre filière pour la déplacer</th></tr></thead><tbody>`;
+  Object.keys(FILIERES).forEach(fk=>{const nac=actsOf(fk).filter(a=>(a.a||'').trim()).length;h+=`<tr><td class="fl" ondragover="event.preventDefault()" ondrop="dropAny(event,'${fk}')" style="border-left:4px solid ${cvar(FILIERES[fk].c)}">${FILIERES[fk].nom}<div><span class="expbtn" onclick="toggleAttrFil('${fk}')">${expandedAttr===fk?'▾':'▸'} actions (${nac})</span></div></td><td class="attrcell" ondragover="event.preventDefault()" ondrop="dropAny(event,'${fk}')"><div id="at-${fk}"></div><button class="addmini" onclick="addAttr('${fk}')">+ besoin / IDE</button></td></tr>`;if(expandedAttr===fk)h+=`<tr class="exprow"><td colspan="2"><div class="inlineact" style="margin:0;border:0;padding:4px 2px"><div class="t">Plan d\'action — ${FILIERES[fk].nom}</div><div id="aact-${fk}"></div><button class="btn ghost sm" onclick="addActionFil('${fk}')">+ Action</button></div></td></tr>`;});
+  h+=`</tbody></table></div>`;document.getElementById("attrTable").innerHTML=h;
+  document.getElementById("attrCount").textContent=attractCount()+" besoin(s) d'investissement renseigné(s)";
+  Object.keys(FILIERES).forEach(fk=>renderAttrCell(fk));if(expandedAttr)renderActs("aact-"+expandedAttr,expandedAttr,null);}
+function toggleAttrFil(fk){expandedAttr=expandedAttr===fk?null:fk;renderAttract();}
+function renderAttrCell(fk){const arr=STATE.attract[fk]||[];const el=document.getElementById(`at-${fk}`);if(!el)return;el.innerHTML=arr.map(it=>uitemHtml(fk,it)).join("");}
+function aco(){const e=document.getElementById("attrCount");if(e)e.textContent=attractCount()+" besoin(s) d'investissement renseigné(s)";refreshKpis();}
+function addAttr(fk){STATE.attract[fk]=STATE.attract[fk]||[];const it={id:uid(),t:""};STATE.attract[fk].push(it);saveState();renderAttrCell(fk);renderMatrix();aco();openBesoin(it.id);}
+function updAttr(fk,id,v){const it=(STATE.attract[fk]||[]).find(x=>x.id===id);if(it)it.t=v;saveState();aco();}
+function delAttr(fk,id){STATE.attract[fk]=(STATE.attract[fk]||[]).filter(x=>x.id!==id);if(STATE.attractScore)delete STATE.attractScore[id];saveState();renderAttrCell(fk);renderMatrix();aco();}
+function dragBesoin(ev,fk,id){DRAG={kind:'besoin',fk,id};try{ev.dataTransfer.setData('text/plain','b');ev.dataTransfer.effectAllowed='move';}catch(e){}}
+function dropBesoin(ev,toFk){ev.preventDefault();if(!DRAG||DRAG.kind!=='besoin')return;const o=DRAG;DRAG=null;if(o.fk===toFk)return;const arr=STATE.attract[o.fk]||[];const idx=arr.findIndex(x=>x.id===o.id);if(idx<0)return;const it=arr.splice(idx,1)[0];STATE.attract[toFk]=STATE.attract[toFk]||[];STATE.attract[toFk].push(it);saveState();renderAttract();renderMatrix();aco();}
+function dragOpp(ev,n){DRAG={kind:'opp',n:String(n)};try{ev.dataTransfer.setData('text/plain','o');ev.dataTransfer.effectAllowed='move';}catch(e){}}
+function dropOpp(ev,toFil,toZone){ev.preventDefault();if(!DRAG||DRAG.kind!=='opp')return;const n=DRAG.n;DRAG=null;STATE.move=STATE.move||{};STATE.move[n]={fil:toFil,zone:toZone};saveState();renderMatrix();renderPrio();}
+function dropAny(ev,fk,zone){ev.preventDefault();if(!DRAG)return;const d=DRAG;DRAG=null;
+ if(d.kind==='besoin'){if(d.fk===fk)return;const arr=STATE.attract[d.fk]||[];const idx=arr.findIndex(x=>x.id===d.id);if(idx<0)return;const it=arr.splice(idx,1)[0];STATE.attract[fk]=STATE.attract[fk]||[];STATE.attract[fk].push(it);saveState();renderAttract();renderMatrix();aco();}
+ else if(d.kind==='opp'){const o=getOpp(d.n);if(!o)return;STATE.move=STATE.move||{};STATE.move[d.n]={fil:fk,zone:zone||o.zone};saveState();renderMatrix();renderPrio();}}
+function besoinsOf(fk){return (STATE.attract[fk]||[]).filter(it=>((it&&it.t)||'').trim()).map(it=>({t:it.t,id:it.id,sc:compositeAttr(it.id)}));}
+
+/* MATRICE STRATEGIQUE (cockpit) */
+let expanded=null,expandedAttr=null;
+function renderMatrix(){
+  let h='<thead><tr><th rowspan="2">Filière<br><span style="font-weight:400">directions</span></th><th rowspan="2" style="background:var(--navy)">Attractivité — besoins / IDE (cliquer la pastille pour noter)</th><th colspan="3" style="background:var(--orange)">Internationalisation — opportunités</th><th rowspan="2">Actions</th></tr>'
+   +'<tr><th class="zoi">Océan Indien</th><th class="eur">France/Europe</th><th class="aut">Autres</th></tr></thead><tbody>';
+  Object.keys(FILIERES).forEach(fk=>{const f=FILIERES[fk];const inFil=ALLOPPS().filter(o=>o.fil===fk);
+    const scs=inFil.map(o=>composite(o.n)).filter(x=>x!=null);const avg=scs.length?Math.round(scs.reduce((a,b)=>a+b,0)/scs.length*10)/10:null;
+    const pv=STATE.prio[fk]||"";const nac=actsOf(fk).filter(a=>(a.a||'').trim()).length;
+    const _bs=besoinsOf(fk).map(b=>b.sc).filter(x=>x!=null);const aavg=_bs.length?Math.round(_bs.reduce((a,b)=>a+b,0)/_bs.length*10)/10:null;
+    h+=`<tr><td class="fl" ondragover="event.preventDefault()" ondrop="dropAny(event,'${fk}')" style="border-left:4px solid ${cvar(f.c)}">${f.nom}<div class="small">${f.dir}</div><div class="small">${aavg!=null?`IDE <b>${aavg}</b>/10`:''}${(aavg!=null&&avg!=null)?' · ':''}${avg!=null?`éco. <b>${avg}</b>/10`:''}</div></td>`;
+    h+=`<td class="attrcell dim-a" ondragover="event.preventDefault()" ondrop="dropAny(event,'${fk}')"><div id="mat-${fk}"></div><button class="addmini" onclick="addAttr('${fk}')">+ besoin</button></td>`;
+    Object.keys(ZONES).forEach(z=>{const cz=inFil.filter(o=>o.zone===z);h+=`<td class="icell dim-i" ondragover="event.preventDefault()" ondrop="dropAny(event,'${fk}','${z}')">${cz.map(o=>{const s=composite(o.n);const bg=s==null?cvar('--gray'):cvar(SCMAP[scoreClass(s)]);return `<span class="ichip" draggable="true" ondragstart="dragOpp(event,${o.n})" style="border-left-color:${bg}" onclick="openScore('${o.n}')">${esc(o.prod)} <span class="mq">(${esc(o.march)})</span>${s!=null?` · <b>${s}</b>`:''}</span>`;}).join("")||'<span class="small">—</span>'}</td>`;});
+    h+=`<td><span class="expbtn" onclick="toggleExp('${fk}')">${expanded===fk?'▾':'▸'} ${nac||''} action${nac>1?'s':''}</span></td></tr>`;
+    if(expanded===fk){h+=`<tr class="exprow"><td colspan="10"><div class="inlineact" style="border:0;margin:0;padding:4px 2px"><div class="t">Plan d'action — ${f.nom}</div><div id="mact-${fk}"></div><button class="btn ghost sm" onclick="addActionFil('${fk}')">+ Action</button></div></td></tr>`;}
+  });
+  h+='</tbody>';const t=document.getElementById("mtxTable");if(t)t.innerHTML=h;
+  const mc=document.getElementById("mtxCount");if(mc)mc.textContent=`${ALLOPPS().length} opportunités · ${attractCount()} besoins/IDE`;
+  Object.keys(FILIERES).forEach(fk=>{const el=document.getElementById(`mat-${fk}`);if(el){el.innerHTML=(STATE.attract[fk]||[]).map(it=>uitemHtml(fk,it)).join("");}if(expanded===fk)renderActs("mact-"+fk,fk,null);});
+  refreshKpis();}
+function setPrio(fk,v){STATE.prio[fk]=v;saveState();renderMatrix();}
+function toggleExp(fk){expanded=expanded===fk?null:fk;renderMatrix();}
+function addActionFil(fk){STATE.actions.push({id:uid(),fil:fk,opp:null,a:"",p:"",e:"",src:"atelier",mr:false});saveState();renderMatrix();}
+
+/* ACTIONS — éditeur réutilisable (modal, matrice, plan) */
+function renderActs(elId,fil,opp,bes){const el=document.getElementById(elId);if(!el)return;const list=actsOf(fil,opp,bes);
+  el.innerHTML=list.map(r=>`<div class="actrow">
+    <input value="${esc(r.a)}" onchange="updAction('${r.id}','a',this.value)" placeholder="Action / levier">
+    <input value="${esc(r.p||'')}" onchange="updAction('${r.id}','p',this.value)" placeholder="Porteur">
+    <select onchange="updAction('${r.id}','e',this.value)">${YEARS.map(y=>`<option ${String(r.e)===y?'selected':''} value="${y}">${y||'échéance'}</option>`).join("")}</select>
+    <label class="mrbox" title="Marque Réunion"><input type="checkbox" ${r.mr?'checked':''} onchange="updAction('${r.id}','mr',this.checked)"></label>
+    <span class="x" onclick="delAction('${r.id}')">×</span></div>`).join("")||'<div class="small">Aucune action.</div>';}
+function updAction(id,field,val){const r=(STATE.actions||[]).find(x=>x.id===id);if(!r)return;if(field==='opp')r.opp=val||null;else if(field==='fil'){r.fil=val;r.opp=null;}else if(field==='mr')r.mr=!!val;else r[field]=val;saveState();if(field==='fil')renderPlan();refreshKpis();}
+function addAction(){STATE.actions.push({id:uid(),fil:Object.keys(FILIERES)[0],opp:null,a:"",p:"",e:"",src:"atelier",mr:false});saveState();renderPlan();}
+function delAction(id){STATE.actions=(STATE.actions||[]).filter(x=>x.id!==id);saveState();renderPlan();renderMatrix();renderAttract();if(document.getElementById("modalBg").classList.contains("open")){if(curMode==='besoin')renderActs("modalActs",null,null,curBesoin);else if(curOpp!=null)renderActs("modalActs",null,curOpp);}}
+
+/* PLAN consolidé */
+function planRowsSorted(){const ff=document.getElementById("gpFil")?document.getElementById("gpFil").value:"";const mr=document.getElementById("gpMr")&&document.getElementById("gpMr").checked;let rows=(STATE.actions||[]).slice().filter(r=>(!ff||r.fil===ff)&&(!mr||r.mr));const s=document.getElementById("gpSort")?document.getElementById("gpSort").value:"fil";
+  if(s==="fil")rows.sort((a,b)=>FILIERES[a.fil].nom.localeCompare(FILIERES[b.fil].nom));
+  else if(s==="porteur")rows.sort((a,b)=>(a.p||"~").localeCompare(b.p||"~"));
+  else if(s==="echeance")rows.sort((a,b)=>(a.e||"~").localeCompare(b.e||"~"));
+  else if(s==="src")rows.sort((a,b)=>(a.src||"").localeCompare(b.src||""));
+  else if(s==="mr")rows.sort((a,b)=>(b.mr?1:0)-(a.mr?1:0));
+  return rows;}
+function oppOptions(fil,sel){const inFil=ALLOPPS().filter(o=>o.fil===fil).slice().sort((a,b)=>a.n-b.n);return `<option value="">— filière entière —</option>`+inFil.map(o=>`<option value="${o.n}" ${String(sel)===String(o.n)?'selected':''}>#${o.n} ${esc(o.prod)} × ${esc(o.march)}</option>`).join("");}
+function filOptions(sel){return Object.keys(FILIERES).map(k=>`<option value="${k}" ${k===sel?'selected':''}>${FILIERES[k].nom}</option>`).join("");}
+function renderPlan(){const gf=document.getElementById("gpFil");if(gf){const cur=gf.value;gf.innerHTML='<option value="">Toutes</option>'+Object.keys(FILIERES).map(k=>`<option value="${k}">${FILIERES[k].nom}</option>`).join("");gf.value=cur;}const rows=planRowsSorted();document.getElementById("planCount").textContent=rows.length+" / "+(STATE.actions||[]).length+" action(s)";
+  let h='<table class="gp"><thead><tr><th style="width:140px;">Filière</th><th style="width:180px;">Opportunité ciblée</th><th>Action / levier</th><th style="width:110px;">Porteur</th><th style="width:96px;">Échéance</th><th style="width:70px;">Marque Réunion</th><th style="width:50px;">Source</th><th style="width:22px;"></th></tr></thead><tbody>';
+  rows.forEach(r=>{h+=`<tr>
+    <td><select onchange="updAction('${r.id}','fil',this.value)">${filOptions(r.fil)}</select></td>
+    <td><select onchange="updAction('${r.id}','opp',this.value)">${oppOptions(r.fil,r.opp)}</select></td>
+    <td><input value="${esc(r.a)}" onchange="updAction('${r.id}','a',this.value)" placeholder="Action / levier"></td>
+    <td><input value="${esc(r.p||'')}" onchange="updAction('${r.id}','p',this.value)" placeholder="Porteur"></td>
+    <td><select onchange="updAction('${r.id}','e',this.value)">${YEARS.map(y=>`<option ${String(r.e)===y?'selected':''} value="${y}">${y||'—'}</option>`).join("")}</select></td>
+    <td style="text-align:center"><input type="checkbox" ${r.mr?'checked':''} onchange="updAction('${r.id}','mr',this.checked)"></td>
+    <td><span class="src ${r.src==='etude'?'e':'a'}">${r.src==='etude'?'étude':'atelier'}</span></td>
+    <td class="x" onclick="delAction('${r.id}')">×</td></tr>`;});
+  if(!rows.length)h+='<tr><td colspan="8" class="small" style="text-align:center;">Aucune action.</td></tr>';
+  h+='</tbody></table>';document.getElementById("planTable").innerHTML=h;refreshKpis();}
+
+/* SYNTHESE + EXPORT */
+function buildExpFils(){document.getElementById("expFils").innerHTML=Object.keys(FILIERES).filter(fk=>ALLOPPS().filter(o=>o.fil===fk).length||besoinsOf(fk).length||(STATE.actions||[]).some(a=>a.fil===fk)).map(fk=>`<label><input type="checkbox" class="expfil" value="${fk}" checked> ${FILIERES[fk].nom}</label>`).join("");}
+function selAllFils(v){document.querySelectorAll(".expfil").forEach(c=>c.checked=v);}
+function selectedFils(){return [...document.querySelectorAll(".expfil:checked")].map(c=>c.value);}
+function renderSynth(){buildExpFils();const all=ALLOPPS();const scored=all.map(o=>({o,sc:composite(o.n)})).filter(x=>x.sc!=null);
+  const avg=scored.length?Math.round(scored.reduce((a,b)=>a+b.sc,0)/scored.length*10)/10:0;
+  const nAc=(STATE.actions||[]).filter(a=>(a.a||'').trim()).length;const nMr=(STATE.actions||[]).filter(a=>a.mr&&(a.a||'').trim()).length;
+  document.getElementById("synthKpis").innerHTML=`<div class="kpi" style="cursor:pointer" onclick="go('intl')"><div class="v">${scored.length}</div><div class="l">Opportunités notées ›</div></div><div class="kpi alt" style="cursor:pointer" onclick="go('intl')"><div class="v">${avg}</div><div class="l">Poids éco. moyen /10 ›</div></div><div class="kpi" style="cursor:pointer" onclick="go('attr')"><div class="v">${attractCount()}</div><div class="l">Besoins / IDE ›</div></div><div class="kpi alt" style="cursor:pointer" onclick="go('strat')"><div class="v">${nAc}</div><div class="l">Actions (${nMr} Marque Réunion) ›</div></div>`;
+  const top=scored.slice().sort((a,b)=>b.sc-a.sc||a.o.n-b.o.n).slice(0,10);
+  document.getElementById("synthTop").innerHTML='<table class="synthtab"><thead><tr><th>Poids</th><th>Opportunité</th><th>Filière</th><th>Zone</th></tr></thead><tbody>'+top.map(x=>`<tr><td><span class="scoredot ${scoreClass(x.sc)}" style="width:26px;height:26px;font-size:11px;">${x.sc}</span></td><td><b>${esc(x.o.prod)}</b> × ${esc(x.o.march)}</td><td>${FILIERES[x.o.fil].nom}</td><td>${ZONES[x.o.zone]}</td></tr>`).join("")+'</tbody></table>';
+  let ft='<thead><tr><th>Filière</th><th>Opp.</th><th>Poids éco. moyen</th><th>Besoins IDE</th><th>Poids IDE moyen</th><th>Actions</th></tr></thead><tbody>';
+  Object.keys(FILIERES).forEach(fk=>{const inFil=all.filter(o=>o.fil===fk);if(!inFil.length&&!besoinsOf(fk).length)return;const sc=inFil.map(o=>composite(o.n)).filter(x=>x!=null);const a=sc.length?Math.round(sc.reduce((p,q)=>p+q,0)/sc.length*10)/10:null;const nac=(STATE.actions||[]).filter(p=>p.fil===fk&&(p.a||'').trim()).length;
+    const _b2=besoinsOf(fk).map(b=>b.sc).filter(x=>x!=null);const aav=_b2.length?Math.round(_b2.reduce((p,q)=>p+q,0)/_b2.length*10)/10:null;ft+=`<tr><td style="font-weight:700;color:var(--navy)">${FILIERES[fk].nom}</td><td>${inFil.length}</td><td>${a!=null?a:'—'}</td><td>${besoinsOf(fk).length}</td><td>${aav!=null?aav:'—'}</td><td>${nac}</td></tr>`;});
+  ft+='</tbody>';document.getElementById("synthFilTable").innerHTML=ft;
+  let cards="";Object.keys(FILIERES).forEach(fk=>{const inFil=all.filter(o=>o.fil===fk);const bes=besoinsOf(fk);if(!inFil.length&&!bes.length)return;const fcol=cvar(FILIERES[fk].c);
+    cards+=`<div class="stratcard" style="border-top-color:${fcol}"><h4>${FILIERES[fk].nom}</h4>`;
+    if(inFil.length){const sorted=inFil.slice().sort((a,b)=>(composite(b.n)??-1)-(composite(a.n)??-1));cards+=`<div class="opps">`+sorted.map(o=>{const s=composite(o.n);const bg=s==null?cvar("--gray"):cvar(SCMAP[scoreClass(s)]);return `<span class="miniopp"><span class="d" style="background:${bg}"></span>${esc(o.prod)} × ${esc(o.march)}${s!=null?` · ${s}`:''}</span>`;}).join("")+`</div>`;}
+    if(bes.length)cards+=`<div class="blk"><div class="t">Besoins d'investissement / IDE</div><ul>${bes.map(b=>`<li>${esc(b.t)}</li>`).join("")}</ul></div>`;
+    const pl=(STATE.actions||[]).filter(p=>p.fil===fk&&(p.a||'').trim());if(pl.length)cards+=`<div class="blk"><div class="t">Plan d'action</div><ul>${pl.map(p=>{const opp=p.opp?getOpp(p.opp):null;return `<li>${esc(p.a)}${opp?` <span class="small">(↳ ${esc(opp.prod)})</span>`:''}${p.p?` — <b>${esc(p.p)}</b>`:''}${p.e?` — ${esc(p.e)}`:''}${p.mr?' <span class="tag mr">Marque Réunion</span>':''}</li>`;}).join("")}</ul></div>`;
+    cards+=`</div>`;});
+  document.getElementById("synthCards").innerHTML=cards;}
+
+function dl(name,content,mime){const blob=new Blob([content],{type:(mime||"text/html")+";charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);}
+function docShell(title,body){const d=new Date().toLocaleDateString('fr-FR');return `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>${title}</title><style>body{font-family:"Arial Narrow",Arial,sans-serif;color:#3C3C3C;margin:28px;}h1{color:#002D69;text-transform:uppercase;border-bottom:3px solid #FF6600;padding-bottom:6px;font-size:20px;}h2{color:#002D69;font-size:16px;margin-top:22px;border-left:4px solid #FF6600;padding-left:8px;}table{border-collapse:collapse;width:100%;margin-top:8px;font-size:12.5px;}th,td{border:1px solid #ccc;padding:6px 9px;text-align:left;}th{background:#002D69;color:#fff;text-transform:uppercase;font-size:11px;}.meta{color:#999;font-size:12px;}.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:middle;}ul{margin:4px 0 0 18px;}li{margin-bottom:3px;}.small{color:#999;font-size:11px;}.mr{color:#8E44AD;font-weight:700;}</style></head><body><h1>${title}</h1><div class="meta">Région Réunion — Atelier filières du 2 juillet 2026 · OPTA-S · export du ${d}</div>${body}<p class="small" style="margin-top:24px;">Études « offre exportable » & « stratégie d'attractivité » (2025-2026), complétées en atelier. Document de travail.</p></body></html>`;}
+function colHex(s){return {'sc-r':'#C0392B','sc-o':'#E08600','sc-l':'#7CB342','sc-g':'#2E8B57','sc-0':'#999999'}[scoreClass(s)];}
+function exportCarto(){const fils=selectedFils();if(!fils.length){alert("Sélectionnez une filière.");return;}let body="";
+  fils.forEach(fk=>{const inFil=ALLOPPS().filter(o=>o.fil===fk).slice().sort((a,b)=>(composite(b.n)??-1)-(composite(a.n)??-1));const sc=inFil.map(o=>composite(o.n)).filter(x=>x!=null);const avg=sc.length?Math.round(sc.reduce((p,q)=>p+q,0)/sc.length*10)/10:'—';
+    body+=`<h2>${FILIERES[fk].nom} <span class="small">— ${inFil.length} opp. · poids moyen ${avg}/10</span></h2><table><thead><tr><th>Rang</th><th>Produit</th><th>Marché</th><th>Zone</th><th>Poids /10</th></tr></thead><tbody>`;
+    inFil.forEach(o=>{const s=composite(o.n);body+=`<tr><td>${o.n}${o.top6?' ★':''}</td><td>${esc(o.prod)}</td><td>${esc(o.march)}</td><td>${ZONES[o.zone]}</td><td>${s!=null?`<span class="dot" style="background:${colHex(s)}"></span>${s}`:'à évaluer'}</td></tr>`;});
+    body+='</tbody></table>';});
+  dl("Cartographie_export_filieres.html",docShell("Cartographie des opportunités export par filière",body));}
+function planBody(fils){let body="";fils.forEach(fk=>{const pl=(STATE.actions||[]).filter(p=>p.fil===fk&&(p.a||'').trim());const bes=besoinsOf(fk);
+    body+=`<h2>${FILIERES[fk].nom}</h2>`;
+    if(bes.length)body+=`<p><b>Besoins d'investissement / IDE (briques manquantes) :</b></p><ul>${bes.map(b=>`<li>${esc(b.t)}</li>`).join("")}</ul>`;
+    if(pl.length){body+='<table><thead><tr><th>Action / levier</th><th>Opportunité</th><th>Porteur</th><th>Échéance</th><th>Marque Réunion</th><th>Source</th></tr></thead><tbody>';pl.forEach(p=>{const opp=p.opp?getOpp(p.opp):null;body+=`<tr><td>${esc(p.a)}</td><td>${opp?('#'+opp.n+' '+esc(opp.prod)):'filière'}</td><td>${esc(p.p||'—')}</td><td>${esc(p.e||'—')}</td><td>${p.mr?'<span class="mr">● Marque Réunion</span>':''}</td><td>${p.src==='etude'?'étude':'atelier'}</td></tr>`;});body+='</tbody></table>';}
+    if(!bes.length&&!pl.length)body+='<p class="small">Rien de renseigné.</p>';});return body;}
+function exportPlanSel(){const fils=selectedFils();if(!fils.length){alert("Sélectionnez une filière.");return;}dl("Plan_action_IDE_filieres.html",docShell("Plans d'action & besoins d'investissement par filière",planBody(fils)));}
+function exportPlanAll(){dl("Plan_action_IDE_complet.html",docShell("Plan d'action & besoins d'investissement — toutes filières",planBody(Object.keys(FILIERES))));}
+
+/* NAV */
+function go(v){document.querySelector(`nav.tabs button[data-view="${v}"]`).click();}
+function rerenderAll(){buildFilterFil();renderPrio();renderAttract();renderMatrix();renderPlan();renderSynth();renderCustomList();renderVersions();}
+document.querySelectorAll("nav.tabs button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));b.classList.add("active");document.getElementById("view-"+b.dataset.view).classList.add("active");const v=b.dataset.view;if(v==="matrix")renderMatrix();if(v==="attr")renderAttract();if(v==="strat")renderPlan();if(v==="synth")renderSynth();}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+function resetAll(){if(!adminOn){alert("Réservé au mode animateur.");return;}if(confirm("Réinitialiser tout l'atelier ? Les données de l'étude seront rétablies.")){STATE={scores:{},attract:{},actions:[],custom:[],versions:STATE.versions||[],prio:{},seeded:false,seededAttract:false};saveState();seedAll();rerenderAll();}}
+
+/* FIREBASE */
+function pushRemote(){if(!DB||REMOTE_APPLYING)return;clearTimeout(SYNC_T);SYNC_T=setTimeout(()=>{try{DB.set({state:JSON.stringify(snapshot()),ts:Date.now()});}catch(e){}},400);}
+function initFirebase(){if(!FIREBASE_CONFIG||typeof firebase==="undefined")return;
+  try{firebase.initializeApp(FIREBASE_CONFIG);DB=firebase.database().ref("ateliers/"+SESSION_ID);
+    document.getElementById("statusbar").classList.add("online");
+    document.getElementById("syncInfo").innerHTML="<strong>En ligne — atelier partagé</strong> · apports synchronisés en temps réel entre les participants.";
+    DB.on("value",snap=>{const v=snap.val();if(v&&v.state){REMOTE_APPLYING=true;try{STATE=norm(JSON.parse(v.state));}catch(e){}REMOTE_APPLYING=false;seedAll();rerenderAll();}else{DB.set({state:JSON.stringify(snapshot()),ts:Date.now()});}});
+  }catch(e){console.warn("Firebase off",e);}}
+
+/* INIT */
+document.getElementById("regLogo").innerHTML=REGION_LOGO?`<img src="${REGION_LOGO}" alt="Région Réunion">`:'<div class="ph">Logo Région</div>';
+buildAddFilSelect();buildFilterFil();renderPrio();renderAttract();renderMatrix();renderPlan();refreshKpis();initFirebase();
+</script>
+</body>
+</html>
