@@ -147,7 +147,7 @@
     <div class="title-block">
       <h1>Attractivité &amp; internationalisation des filières réunionnaises</h1>
       <div class="subtitle">Atelier des référents filières — consolidation des deux études (offre exportable · stratégie d'attractivité)</div>
-      <div class="meta">Région Réunion — DGA DEI — Atelier du 2 juillet 2026 · Outil collaboratif OPTA-S — V9.2</div>
+      <div class="meta">Région Réunion — DGA DEI — Atelier du 2 juillet 2026 · Outil collaboratif OPTA-S — V9.4</div>
     </div>
     <div class="reglogo" id="regLogo"></div>
   </header>
@@ -175,7 +175,7 @@
       <div class="arr">·</div>
       <div class="step"><div class="s">Volet 1</div><h4>Offre exportable</h4><p>56 opportunités (produit × marché) notées par l'étude, révisables.</p></div>
       <div class="arr">·</div>
-      <div class="step navyb"><div class="s">Volet 2</div><h4>Attractivité / IDE</h4><p>Briques manquantes = besoins d'investissement par filière (pré-chargés depuis l'étude, à compléter).</p></div>
+      <div class="step navyb"><div class="s">Volet 2</div><h4>Attractivité / IDE</h4><p>Pour chaque filière : la brique manquante, où trouver l'investissement (local / Hexagone / étranger), et la mesure de protection du local.</p></div>
       <div class="arr">→</div>
       <div class="step"><div class="s">Mise en œuvre</div><h4>Plan d'action &amp; synthèse</h4><p>Actions (porteur, échéance jusqu'à 2030+, marque Réunion), synthèse et exports.</p></div>
     </div>
@@ -238,7 +238,7 @@
   <section class="view" id="view-attr">
     <div class="panel navyb"><h4>Volet stratégie d'attractivité — briques manquantes (besoins d'investissement)</h4>
       <p>Pour chaque filière, on renseigne en trois temps : le <strong>besoin / la brique manquante</strong> (l'investissement utile au développement de la filière, apporté de l'extérieur sans concurrencer le local), <strong>où trouver cet investissement</strong> (local, Hexagone ou étranger — plusieurs choix possibles), et la <strong>mesure de protection de la production locale</strong>. Les besoins se priorisent selon trois critères : faisabilité &amp; délai, impact sur le développement économique de la filière, et impact sur les exportations (exportabilité).</p></div>
-    <div class="toolbar"><span class="small" id="attrCount"></span> <label class="small">Tri <select id="attrSort" onchange="renderAttract()"><option value="fil">Par filière</option><option value="prio">Par priorité (décroissant)</option><option value="maj">Par date de mise à jour</option></select></label><span style="flex:1;"></span><button class="btn ghost sm" onclick="window.print()">Imprimer / PDF</button></div>
+    <div class="toolbar"><span class="small" id="attrCount"></span> <label class="small">Tri <select id="attrSort" onchange="renderAttract()"><option value="fil">Par filière</option><option value="prio_desc">Priorité (forte → faible)</option><option value="prio_asc">Priorité (faible → forte)</option><option value="maj">Mise à jour (récent)</option><option value="anc">Mise à jour (ancien)</option><option value="etr">Origine : étranger d'abord</option><option value="hex">Origine : Hexagone d'abord</option><option value="loc">Origine : local d'abord</option><option value="prot">Protection renseignée d'abord</option><option value="az">Alphabétique (A → Z)</option></select></label><span style="flex:1;"></span><button class="btn ghost sm" onclick="window.print()">Imprimer / PDF</button></div>
     <div id="attrTable"></div>
   </section>
 
@@ -295,6 +295,7 @@
   <div id="oppMove" style="display:none;margin:0 0 12px;font-size:12px;color:var(--navy);font-weight:600">Classer cette opportunité dans : <select id="oppMoveFil" onchange="reclassOpp()" style="font-size:12px"></select> <select id="oppMoveZone" onchange="reclassOpp()" style="font-size:12px"><option value="zoi">Océan Indien</option><option value="eur">France / Europe</option><option value="aut">Autres marchés</option></select></div>
   <div id="besMove" style="display:none;margin:0 0 12px;font-size:12px;color:var(--navy);font-weight:600">Rattacher ce besoin à : <select id="besMoveFil" onchange="reclassBesoin()" style="font-size:12px"></select></div>
   <div id="besProtWrap" style="display:none;margin:0 0 12px"><label style="font-size:11px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.3px">Mesure de protection de la production locale</label><input id="besProt" style="width:100%;margin-top:4px" placeholder="Mesure à prendre pour protéger la production locale…" onchange="setProt(curBesoin,this.value)"></div>
+  <div id="besSrcWrap" style="display:none;margin:0 0 12px;font-size:12px;color:var(--navy)"><b>Où trouver l'investissement :</b> <label style="margin-left:6px"><input type="checkbox" id="bsLoc" onchange="updSrc(curBesoin,'loc',this.checked)"> Local</label> <label style="margin-left:10px"><input type="checkbox" id="bsHex" onchange="updSrc(curBesoin,'hex',this.checked)"> Hexagone</label> <label style="margin-left:10px"><input type="checkbox" id="bsEtr" onchange="updSrc(curBesoin,'etr',this.checked)"> Étranger</label></div>
   <div id="oppDetailWrap" style="display:none;margin:0 0 12px"><label style="font-size:11px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.3px">Produits / services — détail du potentiel</label><textarea id="oppDet" rows="2" style="width:100%;margin:4px 0 8px" placeholder="Préciser les produits/services et le potentiel de la filière…" onchange="updOppMeta(curOpp,'det',this.value)"></textarea><label style="font-size:11px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.3px">Freins à l'export <span style="font-weight:400;text-transform:none;color:var(--gray)">(les solutions relèvent du plan d'action)</span></label><textarea id="oppFS" rows="2" style="width:100%;margin-top:4px" placeholder="Freins identifiés à l'export (normes, fret, production locale en berne…)" onchange="updOppMeta(curOpp,'fs',this.value)"></textarea></div>
   <div id="critWrap"></div>
   <div class="compo"><span class="scoredot sc-0" id="cDot">–</span><span class="lbl" id="cLbl"></span></div>
@@ -313,7 +314,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 <script>
-const APP_VERSION="9.2";
+const APP_VERSION="9.4";
 /* Auto-vérification de version : si une version plus récente est en ligne, la page se recharge proprement (l'utilisateur garde l'URL propre, voit toujours la dernière version). */
 (function(){try{if(location.protocol.indexOf('http')!==0)return;var u=location.pathname+'?_chk='+Date.now();fetch(u,{cache:'no-store'}).then(function(r){return r.text();}).then(function(t){var m=t.match(/OPTA-S — V([\d.]+)/);if(!m)return;var live=m[1];if(live!==APP_VERSION){var key='afr_reloaded_'+live;if(!sessionStorage.getItem(key)){sessionStorage.setItem(key,'1');location.replace(location.pathname+'?v='+live);}}}).catch(function(){});}catch(e){}})();
 const SESSION_ID="REU-FILIERES-2607";
@@ -460,7 +461,7 @@ function openScore(n){curMode='opp';curCrits=CRITS;curOpp=n;const o=getOpp(n);dr
   document.getElementById("resetBtn").style.display=(STATE.scores[n]&&o.e)?"inline-block":"none";
   document.getElementById("besoinEdit").style.display="none";document.getElementById("besoinDel").style.display="none";
   const bm0=document.getElementById("besMove");if(bm0)bm0.style.display="none";const om=document.getElementById("oppMove");if(om){om.style.display="";document.getElementById("oppMoveFil").innerHTML=Object.keys(FILIERES).map(fk=>`<option ${o.fil===fk?'selected':''} value="${fk}">${FILIERES[fk].nom}</option>`).join("");document.getElementById("oppMoveZone").value=o.zone;}
-  var _bpw=document.getElementById("besProtWrap");if(_bpw)_bpw.style.display="none";var _od=document.getElementById("oppDetailWrap");if(_od){_od.style.display="";var _m=oppMeta(n);document.getElementById("oppDet").value=_m.det||"";document.getElementById("oppFS").value=_m.fs||"";}
+  var _bpw=document.getElementById("besProtWrap");if(_bpw)_bpw.style.display="none";var _bsw0=document.getElementById("besSrcWrap");if(_bsw0)_bsw0.style.display="none";var _od=document.getElementById("oppDetailWrap");if(_od){_od.style.display="";var _m=oppMeta(n);document.getElementById("oppDet").value=_m.det||"";document.getElementById("oppFS").value=_m.fs||"";}
   const ia=document.getElementById("inlineActWrap");if(ia)ia.style.display="";
   document.getElementById("inlineActTitle").textContent="Actions liées à cette opportunité";document.getElementById("inlineActBtn").textContent="+ Action sur cette opportunité";
   updateCompo();renderActs("modalActs",null,n);document.getElementById("modalBg").classList.add("open");}
@@ -475,6 +476,7 @@ function openBesoin(id){curMode='besoin';curCrits=CRITS_ATTR;curBesoin=id;draft=
   const om=document.getElementById("oppMove");if(om)om.style.display="none";
   const bm=document.getElementById("besMove");if(bm){bm.style.display="";document.getElementById("besMoveFil").innerHTML=Object.keys(FILIERES).map(k=>`<option ${fil===k?'selected':''} value="${k}">${FILIERES[k].nom}</option>`).join("");}
   var _odw=document.getElementById("oppDetailWrap");if(_odw)_odw.style.display="none";var _bpw2=document.getElementById("besProtWrap");if(_bpw2){_bpw2.style.display="";var _it2=null;Object.keys(STATE.attract).forEach(k=>(STATE.attract[k]||[]).forEach(x=>{if(x.id===id)_it2=x;}));document.getElementById("besProt").value=(_it2&&_it2.prot)||"";}
+  var _bsw=document.getElementById("besSrcWrap");if(_bsw){_bsw.style.display="";var _s3=(_it2&&_it2.src3)||{};document.getElementById("bsLoc").checked=!!_s3.loc;document.getElementById("bsHex").checked=!!_s3.hex;document.getElementById("bsEtr").checked=!!_s3.etr;}
   const ia=document.getElementById("inlineActWrap");if(ia)ia.style.display="";
   document.getElementById("inlineActTitle").textContent="Actions liées à ce besoin";document.getElementById("inlineActBtn").textContent="+ Action sur ce besoin";renderActs("modalActs",null,null,curBesoin);
   updateCompo();document.getElementById("modalBg").classList.add("open");}
@@ -496,20 +498,31 @@ function uitemHtml(fk,it){const sc=compositeAttr(it.id);return `<span class="bch
 function moveFilOptions(cur){return Object.keys(FILIERES).filter(k=>k!==cur).map(k=>`<option value="${k}">${FILIERES[k].nom}</option>`).join("");}
 function moveBesoin(fromFk,id,toFk){if(!toFk)return;const arr=STATE.attract[fromFk]||[];const idx=arr.findIndex(x=>x.id===id);if(idx<0)return;const it=arr.splice(idx,1)[0];STATE.attract[toFk]=STATE.attract[toFk]||[];STATE.attract[toFk].push(it);saveState();renderAttract();renderMatrix();aco();}
 function renderAttract(){var sort=(document.getElementById("attrSort")||{}).value||"fil";
-  function rowHtml(fk,it,showFil){const sc=compositeAttr(it.id);const s3=it.src3||{};const dt=fmtDate(it.updated||it.created);
-    return `<tr class="brqrow"><td>${showFil?('<span class="small" style="border-left:3px solid '+cvar(FILIERES[fk].c)+';padding-left:5px;font-weight:600">'+FILIERES[fk].nom+'</span>'):''}</td><td><input value="${esc(it.t)}" onchange="updAttr('${fk}','${it.id}',this.value)" placeholder="Besoin / brique manquante…" style="width:100%"></td><td class="srccell"><label><input type="checkbox" ${s3.loc?'checked':''} onchange="updSrc('${it.id}','loc',this.checked)"> Local</label><label><input type="checkbox" ${s3.hex?'checked':''} onchange="updSrc('${it.id}','hex',this.checked)"> Hexagone</label><label><input type="checkbox" ${s3.etr?'checked':''} onchange="updSrc('${it.id}','etr',this.checked)"> Étranger</label></td><td><input value="${esc(it.prot||'')}" onchange="setProt('${it.id}',this.value)" placeholder="Comment préserver la production locale…" style="width:100%"></td><td class="small" style="color:var(--gray);white-space:nowrap">${dt}</td><td style="text-align:center"><span class="bnum ${scoreClass(sc)}" style="cursor:pointer" title="Noter / fiche" onclick="openBesoin('${it.id}')">${sc!=null?sc:'·'}</span></td><td class="x" onclick="delAttr('${fk}','${it.id}')">×</td></tr>`;}
-  let h=`<div class="matrix-wrap"><table class="attrtab brq"><thead><tr><th style="width:160px">Filière</th><th>Besoin / brique manquante (investissement utile au développement)</th><th style="width:150px">Où trouver l'investissement</th><th style="width:205px">Mesure de protection de la production locale</th><th style="width:74px">Suivi (maj)</th><th style="width:52px">Priorité</th><th style="width:22px"></th></tr></thead><tbody>`;
+  function rowHtml(fk,it,showFil){var sc=compositeAttr(it.id);var s3=it.src3||{};var dt=fmtDate(it.updated||it.created);
+    return `<tr class="brqrow"><td>${showFil?('<span class="small" style="border-left:3px solid '+cvar(FILIERES[fk].c)+';padding-left:5px;font-weight:600">'+FILIERES[fk].nom+'</span>'):''}</td>`
+      +`<td><input value="${esc(it.t)}" onchange="updAttr('${fk}','${it.id}',this.value)" placeholder="Besoin / brique manquante…" style="width:100%">${dt?('<div style="font-size:7.5px;color:#c2c2c2;text-align:right;margin-top:1px;letter-spacing:.2px">maj '+dt+'</div>'):''}</td>`
+      +`<td class="srccell"><label><input type="checkbox" ${s3.loc?'checked':''} onchange="updSrc('${it.id}','loc',this.checked)"> Local</label><label><input type="checkbox" ${s3.hex?'checked':''} onchange="updSrc('${it.id}','hex',this.checked)"> Hexagone</label><label><input type="checkbox" ${s3.etr?'checked':''} onchange="updSrc('${it.id}','etr',this.checked)"> Étranger</label></td>`
+      +`<td><input value="${esc(it.prot||'')}" onchange="setProt('${it.id}',this.value)" placeholder="Comment préserver la production locale…" style="width:100%"></td>`
+      +`<td style="text-align:center"><span class="bnum ${scoreClass(sc)}" style="cursor:pointer" title="Noter / fiche" onclick="openBesoin('${it.id}')">${sc!=null?sc:'·'}</span></td>`
+      +`<td class="x" onclick="delAttr('${fk}','${it.id}')">×</td></tr>`;}
+  var h=`<div class="matrix-wrap"><table class="attrtab brq"><thead><tr><th style="width:160px">Filière</th><th>Besoin / brique manquante (investissement utile au développement)</th><th style="width:150px">Où trouver l'investissement</th><th style="width:230px">Mesure de protection de la production locale</th><th style="width:54px">Priorité</th><th style="width:22px"></th></tr></thead><tbody>`;
   if(sort==="fil"){
-    Object.keys(FILIERES).forEach(fk=>{const arr=STATE.attract[fk]||[];const nac=actsOf(fk).filter(a=>(a.a||'').trim()).length;
-      h+=`<tr class="filrow"><td class="fl" style="border-left:4px solid ${cvar(FILIERES[fk].c)}"><b>${FILIERES[fk].nom}</b><div><span class="expbtn" onclick="toggleAttrFil('${fk}')">${expandedAttr===fk?'▾':'▸'} actions (${nac})</span></div></td><td colspan="6"><button class="addmini" onclick="addAttr('${fk}')">+ brique manquante</button></td></tr>`;
+    Object.keys(FILIERES).forEach(fk=>{var arr=STATE.attract[fk]||[];var nac=actsOf(fk).filter(a=>(a.a||'').trim()).length;
+      h+=`<tr class="filrow"><td class="fl" style="border-left:4px solid ${cvar(FILIERES[fk].c)}"><b>${FILIERES[fk].nom}</b><div><span class="expbtn" onclick="toggleAttrFil('${fk}')">${expandedAttr===fk?'▾':'▸'} actions (${nac})</span></div></td><td colspan="5"><button class="addmini" onclick="addAttr('${fk}')">+ brique manquante</button></td></tr>`;
       arr.forEach(it=>{h+=rowHtml(fk,it,false);});
-      if(expandedAttr===fk)h+=`<tr class="exprow"><td></td><td colspan="6"><div class="inlineact" style="margin:0;border:0;padding:4px 2px"><div class="t">Plan d'action — ${FILIERES[fk].nom}</div><div id="aact-${fk}"></div><button class="btn ghost sm" onclick="addActionFil('${fk}')">+ Action</button></div></td></tr>`;});
+      if(expandedAttr===fk)h+=`<tr class="exprow"><td></td><td colspan="5"><div class="inlineact" style="margin:0;border:0;padding:4px 2px"><div class="t">Plan d'action — ${FILIERES[fk].nom}</div><div id="aact-${fk}"></div><button class="btn ghost sm" onclick="addActionFil('${fk}')">+ Action</button></div></td></tr>`;});
   } else {
     var all=[];Object.keys(FILIERES).forEach(fk=>(STATE.attract[fk]||[]).forEach(it=>all.push({fk:fk,it:it})));
-    if(sort==="prio")all.sort((a,b)=>((compositeAttr(b.it.id)==null?-1:compositeAttr(b.it.id))-(compositeAttr(a.it.id)==null?-1:compositeAttr(a.it.id))));
+    var sc=function(id){var v=compositeAttr(id);return v==null?-1:v;};
+    if(sort==="prio_desc")all.sort((a,b)=>sc(b.it.id)-sc(a.it.id));
+    else if(sort==="prio_asc")all.sort((a,b)=>{var x=sc(a.it.id),y=sc(b.it.id);if(x<0)return 1;if(y<0)return -1;return x-y;});
     else if(sort==="maj")all.sort((a,b)=>String(b.it.updated||b.it.created||'').localeCompare(String(a.it.updated||a.it.created||'')));
+    else if(sort==="anc")all.sort((a,b)=>String(a.it.updated||a.it.created||'~').localeCompare(String(b.it.updated||b.it.created||'~')));
+    else if(sort==="etr"||sort==="hex"||sort==="loc")all.sort((a,b)=>(((b.it.src3&&b.it.src3[sort])?1:0)-((a.it.src3&&a.it.src3[sort])?1:0))||(sc(b.it.id)-sc(a.it.id)));
+    else if(sort==="prot")all.sort((a,b)=>((((b.it.prot||'').trim())?1:0)-(((a.it.prot||'').trim())?1:0))||(sc(b.it.id)-sc(a.it.id)));
+    else if(sort==="az")all.sort((a,b)=>String(a.it.t||'').localeCompare(String(b.it.t||'')));
     all.forEach(o=>{h+=rowHtml(o.fk,o.it,true);});
-    if(!all.length)h+=`<tr><td colspan="7" class="small" style="text-align:center">Aucune brique manquante.</td></tr>`;
+    if(!all.length)h+=`<tr><td colspan="6" class="small" style="text-align:center">Aucune brique manquante.</td></tr>`;
   }
   h+=`</tbody></table></div>`;document.getElementById("attrTable").innerHTML=h;
   document.getElementById("attrCount").textContent=attractCount()+" besoin(s) / brique(s) manquante(s) renseigné(s)";
@@ -534,7 +547,8 @@ function dropOpp(ev,toFil,toZone){ev.preventDefault();if(!DRAG||DRAG.kind!=='opp
 function dropAny(ev,fk,zone){ev.preventDefault();if(!DRAG)return;const d=DRAG;DRAG=null;
  if(d.kind==='besoin'){if(d.fk===fk)return;const arr=STATE.attract[d.fk]||[];const idx=arr.findIndex(x=>x.id===d.id);if(idx<0)return;const it=arr.splice(idx,1)[0];STATE.attract[fk]=STATE.attract[fk]||[];STATE.attract[fk].push(it);saveState();renderAttract();renderMatrix();aco();}
  else if(d.kind==='opp'){const o=getOpp(d.n);if(!o)return;STATE.move=STATE.move||{};STATE.move[d.n]={fil:fk,zone:zone||o.zone};saveState();renderMatrix();renderPrio();}}
-function besoinsOf(fk){return (STATE.attract[fk]||[]).filter(it=>((it&&it.t)||'').trim()).map(it=>({t:it.t,id:it.id,prot:it.prot||'',sc:compositeAttr(it.id)}));}
+function besoinsOf(fk){return (STATE.attract[fk]||[]).filter(it=>((it&&it.t)||'').trim()).map(it=>({t:it.t,id:it.id,prot:it.prot||'',src3:it.src3||{},sc:compositeAttr(it.id)}));}
+function origLbl(s3){if(!s3)return"";var a=[];if(s3.loc)a.push("Local");if(s3.hex)a.push("Hexagone");if(s3.etr)a.push("Étranger");return a.join(" · ");}
 
 /* MATRICE STRATEGIQUE (cockpit) */
 let expanded=null,expandedAttr=null;
@@ -603,7 +617,7 @@ function selectedFils(){return [...document.querySelectorAll(".expfil:checked")]
 function renderSynth(){buildExpFils();const all=ALLOPPS();const scored=all.map(o=>({o,sc:composite(o.n)})).filter(x=>x.sc!=null);
   const avg=scored.length?Math.round(scored.reduce((a,b)=>a+b.sc,0)/scored.length*10)/10:0;
   const nAc=(STATE.actions||[]).filter(a=>(a.a||'').trim()).length;const nMr=(STATE.actions||[]).filter(a=>a.mr&&(a.a||'').trim()).length;
-  document.getElementById("synthKpis").innerHTML=`<div class="kpi" style="cursor:pointer" onclick="go('intl')"><div class="v">${scored.length}</div><div class="l">Opportunités notées ›</div></div><div class="kpi alt" style="cursor:pointer" onclick="go('intl')"><div class="v">${avg}</div><div class="l">Poids éco. moyen /10 ›</div></div><div class="kpi" style="cursor:pointer" onclick="go('attr')"><div class="v">${attractCount()}</div><div class="l">Besoins / IDE ›</div></div><div class="kpi alt" style="cursor:pointer" onclick="go('strat')"><div class="v">${nAc}</div><div class="l">Actions (${nMr} Marque Réunion) ›</div></div>`;
+  document.getElementById("synthKpis").innerHTML=`<div class="kpi" style="cursor:pointer" onclick="go('intl')"><div class="v">${scored.length}</div><div class="l">Opportunités notées ›</div></div><div class="kpi alt" style="cursor:pointer" onclick="go('intl')"><div class="v">${avg}</div><div class="l">Poids éco. moyen /10 ›</div></div><div class="kpi" style="cursor:pointer" onclick="go('attr')"><div class="v">${attractCount()}</div><div class="l">Briques manquantes ›</div></div><div class="kpi alt" style="cursor:pointer" onclick="go('strat')"><div class="v">${nAc}</div><div class="l">Actions (${nMr} Marque Réunion) ›</div></div>`;
   const top=scored.slice().sort((a,b)=>b.sc-a.sc||a.o.n-b.o.n).slice(0,10);
   document.getElementById("synthTop").innerHTML='<table class="synthtab"><thead><tr><th>Poids</th><th>Opportunité</th><th>Filière</th><th>Zone</th></tr></thead><tbody>'+top.map(x=>`<tr><td><span class="scoredot ${scoreClass(x.sc)}" style="width:26px;height:26px;font-size:11px;">${x.sc}</span></td><td><b>${esc(x.o.prod)}</b> × ${esc(x.o.march)}</td><td>${FILIERES[x.o.fil].nom}</td><td>${ZONES[x.o.zone]}</td></tr>`).join("")+'</tbody></table>';
   let ft='<thead><tr><th>Filière</th><th>Opp.</th><th>Poids éco. moyen</th><th>Besoins IDE</th><th>Poids IDE moyen</th><th>Actions</th></tr></thead><tbody>';
@@ -613,7 +627,7 @@ function renderSynth(){buildExpFils();const all=ALLOPPS();const scored=all.map(o
   let cards="";Object.keys(FILIERES).forEach(fk=>{const inFil=all.filter(o=>o.fil===fk);const bes=besoinsOf(fk);if(!inFil.length&&!bes.length)return;const fcol=cvar(FILIERES[fk].c);
     cards+=`<div class="stratcard" style="border-top-color:${fcol}"><h4>${FILIERES[fk].nom}</h4>`;
     if(inFil.length){const sorted=inFil.slice().sort((a,b)=>(composite(b.n)??-1)-(composite(a.n)??-1));cards+=`<div class="opps">`+sorted.map(o=>{const s=composite(o.n);const bg=s==null?cvar("--gray"):cvar(SCMAP[scoreClass(s)]);return `<span class="miniopp"><span class="d" style="background:${bg}"></span>${esc(o.prod)} × ${esc(o.march)}${s!=null?` · ${s}`:''}</span>`;}).join("")+`</div>`;}
-    if(bes.length)cards+=`<div class="blk"><div class="t">Besoins d'investissement / IDE</div><ul>${bes.map(b=>`<li>${esc(b.t)}</li>`).join("")}</ul></div>`;
+    if(bes.length)cards+=`<div class="blk"><div class="t">Briques manquantes — besoins d'investissement / IDE</div><ul>${bes.map(b=>{var o=origLbl(b.src3);return `<li>${esc(b.t)}${b.sc!=null?` <b>(${b.sc}/10)</b>`:''}${o?` — <span class="small">où : ${o}</span>`:''}${b.prot?` — <span class="small">protection : ${esc(b.prot)}</span>`:''}</li>`;}).join("")}</ul></div>`;
     const pl=(STATE.actions||[]).filter(p=>p.fil===fk&&(p.a||'').trim());if(pl.length)cards+=`<div class="blk"><div class="t">Plan d'action</div><ul>${pl.map(p=>{const opp=p.opp?getOpp(p.opp):null;return `<li>${esc(p.a)}${opp?` <span class="small">(↳ ${esc(opp.prod)})</span>`:''}${p.p?` — <b>${esc(p.p)}</b>`:''}${p.e?` — ${esc(p.e)}`:''}${p.mr?' <span class="tag mr">Marque Réunion</span>':''}</li>`;}).join("")}</ul></div>`;
     cards+=`</div>`;});
   document.getElementById("synthCards").innerHTML=cards;}
@@ -629,7 +643,7 @@ function exportCarto(){const fils=selectedFils();if(!fils.length){alert("Sélect
   dl("Cartographie_export_filieres.html",docShell("Cartographie des opportunités export par filière",body));}
 function planBody(fils){let body="";fils.forEach(fk=>{const pl=(STATE.actions||[]).filter(p=>p.fil===fk&&(p.a||'').trim());const bes=besoinsOf(fk);
     body+=`<h2>${FILIERES[fk].nom}</h2>`;
-    if(bes.length)body+=`<p><b>Briques manquantes — besoins d'investissement / IDE :</b></p><ul>${bes.map(b=>`<li>${esc(b.t)}${b.prot?` — <i>protection production locale : ${esc(b.prot)}</i>`:''}</li>`).join("")}</ul>`;
+    if(bes.length)body+=`<p><b>Briques manquantes — besoins d'investissement / IDE :</b></p><ul>${bes.map(b=>{var o=origLbl(b.src3);return `<li>${esc(b.t)}${b.sc!=null?` (priorité ${b.sc}/10)`:''}${o?` — origine : ${o}`:''}${b.prot?` — <i>protection production locale : ${esc(b.prot)}</i>`:''}</li>`;}).join("")}</ul>`;
     if(pl.length){body+='<table><thead><tr><th>Action / levier</th><th>Opportunité</th><th>Porteur</th><th>Échéance</th><th>Marque Réunion</th><th>Source</th></tr></thead><tbody>';pl.forEach(p=>{const opp=p.opp?getOpp(p.opp):null;body+=`<tr><td>${esc(p.a)}</td><td>${opp?('#'+opp.n+' '+esc(opp.prod)):'filière'}</td><td>${esc(p.p||'—')}</td><td>${esc(p.e||'—')}</td><td>${p.mr?'<span class="mr">● Marque Réunion</span>':''}</td><td>${p.src==='etude'?'étude':'atelier'}</td></tr>`;});body+='</tbody></table>';}
     if(!bes.length&&!pl.length)body+='<p class="small">Rien de renseigné.</p>';});return body;}
 function exportPlanSel(){const fils=selectedFils();if(!fils.length){alert("Sélectionnez une filière.");return;}dl("Plan_action_IDE_filieres.html",docShell("Plans d'action & besoins d'investissement par filière",planBody(fils)));}
